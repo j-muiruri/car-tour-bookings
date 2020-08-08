@@ -39,13 +39,13 @@
 <body class="loader-active">
 
     <!--== Preloader Area Start ==-->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="preloader-spinner">
             <div class="loader-content">
                 <img src="assets/img/preloader.gif" alt="JSOFT">
             </div>
         </div>
-    </div>
+    </div> -->
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
@@ -254,7 +254,7 @@
                     <div class="section-title  text-center">
                         <h2>Testimonials</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet elit.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- Section Title End -->
@@ -265,8 +265,8 @@
                     <div class="testimonial-content">
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit, at autem repellat vel magni architecto veritatis sed.</p>
-                            <h3>Vongchong Smith</h3>
+                            <p></p>
+                            <h3></h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-1.jpg" alt="JSOFT">
                             </div>
@@ -275,8 +275,8 @@
 
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit, at autem repellat vel magni architecto veritatis sed.</p>
-                            <h3>Amader Tuni</h3>
+                            <p></p>
+                            <h3></h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-3.jpg" alt="JSOFT">
                             </div>
@@ -285,8 +285,8 @@
 
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit, at autem repellat vel magni architecto veritatis sed.</p>
-                            <h3>Atex Tuntuni Smith</h3>
+                            <p></p>
+                            <h3></h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-2.jpg" alt="JSOFT">
                             </div>

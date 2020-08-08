@@ -8,7 +8,7 @@
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Cardoor - Car Rental HTML Template</title>
+    <title>Jofra Safaris - Contact Us</title>
 
     <!--=== Bootstrap CSS ===-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -39,13 +39,13 @@
 <body class="loader-active">
 
     <!--== Preloader Area Start ==-->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="preloader-spinner">
             <div class="loader-content">
                 <img src="assets/img/preloader.gif" alt="JSOFT">
             </div>
         </div>
-    </div>
+    </div> -->
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
@@ -63,7 +63,7 @@
                     <div class="section-title  text-center">
                         <h2>Contact Us</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- Page Title End -->

@@ -32,7 +32,7 @@ else {
                     <div class="section-title  text-center">
                         <h2><?php  echo $carDetails['make']. " - ".$carDetails['model'];?></h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- Page Title End -->
@@ -48,7 +48,8 @@ else {
                 <!-- Car List Content Start -->
                 <div class="col-lg-8">
                     <div class="car-details-content">
-                        <h2><?php  echo $carDetails['make']. " - ".$carDetails['model'];?><span class="price">Rent: 
+                        <h2><?php  echo $carDetails['make']. " - ".$carDetails['model'];?>
+                        <span class="price">Rent: 
                         <b>Ksh. <?php  echo $carDetails['price'];?></b></span></h2>
                         <div class="car-preview-crousel">
                             <div class="single-car-preview">
@@ -79,7 +80,7 @@ else {
                                                     <td>Petrol</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Seatss</th>
+                                                    <th>Seats</th>
                                                     <td><?php  echo $carDetails['seats'];?></td>
                                                 </tr>
                                                 <tr>
@@ -108,45 +109,7 @@ else {
                                 </div>
                             </div>
                             <!--Review  Area  start-->
-                            <div class="review-area">
-                                <h3>Be the first to review “<?php  echo $carDetails['make']. " - ".$carDetails['model'];?>”</h3>
-                                <div class="review-star">
-                                    <p class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star unmark"></i>
-                                        <i class="fa fa-star unmark"></i>
-                                    </p>
-                                </div>
-                                <div class="review-form">
-                                    <form action="index.html">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="name-input">
-                                                    <input type="text" placeholder="Full Name">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="email-input">
-                                                    <input type="email" placeholder="Email Address">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="message-input">
-                                            <textarea name="review" cols="30" rows="5" placeholder="Write Your Feedback Here!"></textarea>
-                                        </div>
-
-                                        <div class="input-submit">
-                                            <button type="submit">Submit</button>
-                                            <button type="reset">Clear</button>
-                                        </div>
-                                    </form>
-                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
                 <!-- Car List Content End -->

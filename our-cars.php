@@ -17,7 +17,7 @@
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Cardoor - Car Rental HTML Template</title>
+    <title>Jofra Safaris - Car Rental</title>
 
     <!--=== Bootstrap CSS ===-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -48,13 +48,13 @@
 <body class="loader-active">
 
     <!--== Preloader Area Start ==-->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="preloader-spinner">
             <div class="loader-content">
                 <img src="assets/img/preloader.gif" alt="JSOFT">
             </div>
         </div>
-    </div>
+    </div> -->
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
@@ -125,7 +125,12 @@ include 'header.php';
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star unmark"></i>
                                                 </p>
-                                                <a href="contact.php" class="rent-btn">Book It</a>
+                                                <a class='rent-btn' href="car-details.php?id=<?php echo $row['0']; ?>">View this Car</a>
+                                                <?php
+                                                    $make = $row['1'];
+                                                    $model =  $row['2']; 
+                                                    echo "<a href='book.php?make=$make&model=$model' class='rent-btn'>Book</a>";
+                                                    ?> 
                                             </div>
                                         </div>
                                     </div>
@@ -174,58 +179,7 @@ include 'header.php';
                         <!-- Single Sidebar End -->
 
                         <!-- Single Sidebar Start -->
-                        <div class="single-sidebar">
-                            <h3>Rental Tips</h3>
-
-                            <div class="sidebar-body">
-                                <ul class="recent-tips">
-                                    <li class="single-recent-tips">
-                                        <div class="recent-tip-thum">
-                                            <a href="#"><img src="assets/img/we-do/service1-img.png" alt="JSOFT"></a>
-                                        </div>
-                                        <div class="recent-tip-body">
-                                            <h4><a href="#">Things to check before you hire a car</a></h4>
-                                            <span class="date">February 5, 2020</span>
-                                        </div>
-                                    </li>
-
-
-                                    <li class="single-recent-tips">
-                                        <div class="recent-tip-thum">
-                                            <a href="#"><img src="assets/img/we-do/service1-img.png" alt="JSOFT"></a>
-                                        </div>
-                                        <div class="recent-tip-body">
-                                            <h4><a href="#">Things to check before you hire a car</a></h4>
-                                            <span class="date">February 5, 2020</span>
-                                        </div>
-                                    </li>
-
-
-                                    <li class="single-recent-tips">
-                                        <div class="recent-tip-thum">
-                                            <a href="#"><img src="assets/img/we-do/service1-img.png" alt="JSOFT"></a>
-                                        </div>
-                                        <div class="recent-tip-body">
-                                            <h4><a href="#">Things to check before you hire a car</a></h4>
-                                            <span class="date">February 5, 2020</span>
-                                        </div>
-                                    </li>
-
-
-
-                                    <li class="single-recent-tips">
-                                        <div class="recent-tip-thum">
-                                            <a href="#"><img src="assets/img/we-do/service1-img.png" alt="JSOFT"></a>
-                                        </div>
-                                        <div class="recent-tip-body">
-                                            <h4><a href="#">Things to check before you hire a car</a></h4>
-                                            <span class="date">February 5, 2020</span>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
+                      
                         <!-- Single Sidebar End -->
 
                         <!-- Single Sidebar Start -->

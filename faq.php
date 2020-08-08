@@ -8,7 +8,7 @@
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Cardoor - Car Rental HTML Template</title>
+    <title>Jofra Safaris - FAQ</title>
 
     <!--=== Bootstrap CSS ===-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -39,13 +39,13 @@
 <body class="loader-active">
 
     <!--== Preloader Area Start ==-->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="preloader-spinner">
             <div class="loader-content">
                 <img src="assets/img/preloader.gif" alt="JSOFT">
             </div>
         </div>
-    </div>
+    </div> -->
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
@@ -63,7 +63,7 @@
                     <div class="section-title  text-center">
                         <h2>FAQ's</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- Page Title End -->
@@ -96,7 +96,7 @@
 
 										<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 											<div class="card-body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, noncepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												
 											</div>
 										</div>
 									</div>
@@ -113,7 +113,7 @@
 										</div>
 										<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 											<div class="card-body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunto-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												
 											</div>
 										</div>
 									</div>
@@ -130,7 +130,7 @@
 										</div>
 										<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
 											<div class="card-body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high life acNihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												
 											</div>
 										</div>
 									</div>
@@ -157,7 +157,7 @@
 
 										<div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion_2">
 											<div class="card-body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, noncepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												 
 											</div>
 										</div>
 									</div>
@@ -174,7 +174,7 @@
 										</div>
 										<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion_2">
 											<div class="card-body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunto-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												 
 											</div>
 										</div>
 									</div>
@@ -191,7 +191,7 @@
 										</div>
 										<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion_2">
 											<div class="card-body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high life acNihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												
 											</div>
 										</div>
 									</div>
@@ -208,7 +208,7 @@
 										</div>
 										<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion_2">
 											<div class="card-body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high life acNihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												
 											</div>
 										</div>
 									</div>

@@ -122,21 +122,23 @@ function addImage($carId,$pathname)
 /**
  * List  Car Images
  *@return $result
+ * 
  * */
 function getImages($carId)
 {
     $conn = dbConn();
     $resourcetype = "car";
     $sql ="SELECT name FROM car_images WHERE image_id = '$carId'";
-
+    $data = $conn->query($sql);
     if ($data->num_rows > 0) {
         // echo "Images Obtained";
         $result = $data->fetch_all();
 
             return $result;
     } else {
-
-        return "Error: " . $sql . "<br>" . $conn->error;
+// echo "Error: " . $sql . "<br>" . $conn->error;
+        $result ="null";
+        return $result;
     }
 
     $conn->close();

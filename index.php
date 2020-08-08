@@ -1,7 +1,7 @@
 <?php
 
 /**
-* Jofra Home* 
+* Jofra Home
 * 
 */
 
@@ -51,13 +51,13 @@
 <body class="loader-active">
 
     <!--== Preloader Area Start ==-->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="preloader-spinner">
             <div class="loader-content">
                 <img src="assets/img/preloader.gif" alt="JSOFT">
             </div>
         </div>
-    </div>
+    </div> -->
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
@@ -188,7 +188,16 @@
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-1.png" alt="JSOFT">
+                                    <img src="assets/img/partner/lekato-safaris-logo.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="assets/img/partner/logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
@@ -198,7 +207,7 @@
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-2.png" alt="JSOFT">
+                                    <img src="assets/img/partner/lekato-safaris-logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
@@ -208,7 +217,7 @@
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-3.png" alt="JSOFT">
+                                    <img src="assets/img/partner/logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
@@ -218,37 +227,16 @@
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-4.png" alt="JSOFT">
+                                    <img src="assets/img/partner/lekato-safaris-logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
                         <!-- Single Partner End -->
-
                         <!-- Single Partner Start -->
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-5.png" alt="JSOFT">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Partner End -->
-
-                        <!-- Single Partner Start -->
-                        <div class="single-partner">
-                            <div class="display-table">
-                                <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-1.png" alt="JSOFT">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Partner End -->
-
-                        <!-- Single Partner Start -->
-                        <div class="single-partner">
-                            <div class="display-table">
-                                <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-4.png" alt="JSOFT">
+                                    <img src="assets/img/partner/logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
@@ -394,7 +382,7 @@
                     <div class="section-title  text-center">
                         <h2>Choose your Car</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Make a booking tday and enjoy 15% discount</p>
                     </div>
                 </div>
                 <!-- Section Title End -->
@@ -412,9 +400,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#newest_cars" role="tab" aria-selected="false">newest cars</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#office_map" role="tab" aria-selected="false">Our Office</a>
-                            </li>
                         </ul>
                         <!-- Choose Area Tab Menu -->
 
@@ -427,10 +412,8 @@
                                     <!-- Filtering Menu -->
                                     <div class="popucar-menu text-center">
                                         <a href="#" data-filter="*" class="active">all</a>
-                                        <a href="#" data-filter=".con">Conver</a>
-                                        <a href="#" data-filter=".hat">Truck</a>
-                                        <a href="#" data-filter=".mpv">MPV</a>
-                                        <a href="#" data-filter=".sedan">Sedan</a>
+                                        <a href="#" data-filter=".saloon">Saloon</a>
+                                        <a href="#" data-filter=".bus">Buses</a>
                                         <a href="#" data-filter=".suv">SUV</a>
                                     </div>
 
@@ -447,7 +430,7 @@
 
                                         foreach ($carsList as $row) :
                                         ?>
-                                            <div class="col-lg-4 col-md-6 con suv mpv">
+                                            <div class="col-lg-4 col-md-6 suv bus saloon">
                                                 <div class="single-popular-car">
                                                     <div class="p-car-thumbnails">
                                                         <a class="car-hover" href="assets/img/car/toyota-v8.jpg">
@@ -468,10 +451,15 @@
                                                             <a href="#"><?php echo $row['4']; ?></a>
                                                             <a href="#">AIR CONDITION</a>
                                                             <br>
-                                                        <h5>
-                                                            <a href="car-details.php?id=<?php echo $row['0']; ?>">View this Car</a>
-                                                            </h5>
-                                                        </div>
+                                                         </div>
+                                                        
+                                                            <a class='rent-btn' href="car-details.php?id=<?php echo $row['0']; ?>">View this Car</a>
+                                                            <?php
+                                                    $make = $row['1'];
+                                                    $model =  $row['2']; 
+                                                    echo "<a href='book.php?make=$make&model=$model' class='rent-btn'>Book</a>";
+                                                    ?> 
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -486,122 +474,6 @@
                                 <!-- Popular Cars Content Wrapper End -->
                             </div>
                             <!-- Popular Cars Tab End -->
-
-                            <!-- Newest Cars Tab Start -->
-                            <div class="tab-pane fade" id="newest_cars" role="tabpanel" aria-labelledby="profile-tab">
-                                <!-- Newest Cars Content Wrapper Start -->
-                                <div class="popular-cars-wrap">
-                                    <!-- Filtering Menu -->
-                                    <div class="newcar-menu text-center">
-                                        <a href="#" data-filter="*" class="active">all</a>
-                                        <a href="#" data-filter=".toyota">toyota</a>
-                                        <a href="#" data-filter=".bmw">bmw</a>
-                                        <a href="#" data-filter=".audi">audi</a>
-                                        <a href="#" data-filter=".tata">Tata</a>
-                                    </div>
-
-                                    <!-- Filtering Menu -->
-
-                                    <!-- NewestCars Tab Content Start -->
-                                    <div class="row newest-car-gird">
-                                        <!-- Single Newest Car Start -->
-                                        <div class="col-lg-4 col-md-6 tata audi">
-
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="assets/img/car/toyota-v8.jpg">
-                                                        <img src="assets/img/car/toyota-v8.jpg" alt="JSOFT">
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Toyota V8 2019</a>
-                                                        <span class="price"><i class="fa fa-tag"></i>KES
-                                                            10,000/day</span>
-                                                    </h3>
-
-                                                    <h5>HATCHBACK</h5>
-
-                                                    <div class="p-car-feature">
-                                                        <a href="#">2017</a>
-                                                        <a href="#">manual</a>
-                                                        <a href="#">AIR CONDITION</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Newest Car End -->
-
-                                        <!-- Single Newest Car Start -->
-                                        <div class="col-lg-4 col-md-6 bmw tata toyota">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="assets/img/car/toyota-v8.jpg">
-                                                        <img src="assets/img/car/toyota-v8.jpg" alt="JSOFT">
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Toyota V8 2019</a>
-                                                        <span class="price"><i class="fa fa-tag"></i>KES
-                                                            10,000/day</span>
-                                                    </h3>
-
-                                                    <h5>HATCHBACK</h5>
-
-                                                    <div class="p-car-feature">
-                                                        <a href="#">2017</a>
-                                                        <a href="#">manual</a>
-                                                        <a href="#">AIR CONDITION</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Newest Car End -->
-
-                                        <!-- Single Newest Car Start -->
-                                        <div class="col-lg-4 col-md-6 bmw">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="assets/img/car/toyota-v8.jpg">
-                                                        <img src="assets/img/car/toyota-v8.jpg" alt="JSOFT">
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Toyota V8 2019</a>
-                                                        <span class="price"><i class="fa fa-tag"></i>KES
-                                                            10,000/day</span>
-                                                    </h3>
-
-                                                    <h5>HATCHBACK</h5>
-
-                                                    <div class="p-car-feature">
-                                                        <a href="#">2017</a>
-                                                        <a href="#">manual</a>
-                                                        <a href="#">AIR CONDITION</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Newest Car End -->
-                                    </div>
-                                    <!-- NewestCars Tab Content End -->
-                                </div>
-                                <!-- Newest Cars Content Wrapper End -->
-                            </div>
-                            <!-- Newest Cars Tab End -->
-
-                            <!-- Office Map Tab -->
-                            <div class="tab-pane fade" id="office_map" role="tabpanel" aria-labelledby="contact-tab">
-                                <div class="map-area">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.6538067244583!2d90.37092511435942!3d23.79533919297639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0cce3251ab1%3A0x7a2aa979862a9643!2sJSoft!5e0!3m2!1sen!2sbd!4v1516771096779"></iframe>
-                                </div>
-                            </div>
-                            <!-- Office Map Tab -->
                         </div>
                         <!-- Choose Area Tab content -->
                     </div>
@@ -623,7 +495,7 @@
                     <div class="section-title  text-center">
                         <h2>Tours and Excursions</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
                     </div>
                 </div>
                 <!-- Section Title End -->
@@ -689,8 +561,12 @@
                                                         <a href="#"><?php echo $row['4']; ?></a>
                                                         <a href="#">Group size: <?php echo $row['3']; ?></a>
                                                         <br>
-                                                        <h5><a href="tour-details.php?id=<?php echo $row['0']; ?>">View this Tour</a></h5>
+                                                        
                                                     </div>
+                                                    <a class='rent-btn' href="tour-details.php?id=<?php echo $row['0']; ?>">View this Tour</a>
+                                                   
+                                                   <a href="book.php?tour=<?php echo $row['1']; ?>" class='rent-btn'>Book</a>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -841,7 +717,7 @@
                     <div class="section-title  text-center">
                         <h2>Testimonials</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet elit.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- Section Title End -->
@@ -852,9 +728,8 @@
                     <div class="testimonial-content">
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
-                                at autem repellat vel magni architecto veritatis sed.</p>
-                            <h3>Vongchong Smith</h3>
+                            <p></p>
+                            <h3></h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-1.jpg" alt="JSOFT">
                             </div>
@@ -863,9 +738,8 @@
 
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
-                                at autem repellat vel magni architecto veritatis sed.</p>
-                            <h3>Christine Benson</h3>
+                            <p></p>
+                            <h3></h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-3.jpg" alt="JSOFT">
                             </div>
@@ -874,9 +748,8 @@
 
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
-                                at autem repellat vel magni architecto veritatis sed.</p>
-                            <h3>Eliud Mwangi</h3>
+                            <p></p>
+                            <h3></h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-2.jpg" alt="JSOFT">
                             </div>

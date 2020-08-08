@@ -5,26 +5,6 @@
  * 
  * */
 //  require  "config/db.config.php";
-
-/**
- * Add Tour to db 
- * @return true
- * */
-function addTour($name,$location,$group_size,$package_type,$days,$price)
-{
-    $conn = dbConn();
-    $sql = "INSERT INTO tours (`name`, `location`, `group_size`, `package_type`, `days`, `price`) 
-    VALUES ('$name','$location','$group_size','$package_type','$days','$price')";
-
-
-    if ($conn->query($sql) === true) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $conn->close();
-}
 /**
  * List Tours
  * @return $result
@@ -32,7 +12,7 @@ function addTour($name,$location,$group_size,$package_type,$days,$price)
 function getTours()
 {
     $conn = dbConn();
-    $sql = "SELECT `id`, `name`, `location`, `group_size`, `package_type`, `days`, `price` FROM tours";
+    $sql = "SELECT `id`, `name`, `location`, `group_size`, `package_type`, `days`, `price`, `description` FROM tours";
     $data = $conn->query($sql);
     if ($data->num_rows > 0) {
         // echo "Record Obtained";
@@ -50,7 +30,7 @@ function getTours()
 function getTour($id)
 {
     $conn = dbConn();
-    $sql = "SELECT `id`,`name`, `location`, `group_size`, `package_type`, `days`, `price` FROM tours WHERE id = '$id'";
+    $sql = "SELECT `id`,`name`, `location`, `group_size`, `package_type`, `days`, `price`,`description` FROM tours WHERE id = '$id'";
     $data = $conn->query($sql);
     if ($data->num_rows > 0) {
         // echo "Record Obtained";

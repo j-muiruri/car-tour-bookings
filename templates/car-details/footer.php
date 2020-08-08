@@ -4,12 +4,12 @@
             <div class="container">
                 <div class="row">
                     <!-- Single Footer Widget Start -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="single-footer-widget">
                             <h2>About Us</h2>
                             <div class="widget-body">
                                 <img src="assets/img/logo.png" alt="JSOFT">
-                                <p>Lorem ipsum dolored is a sit ameted consectetur adipisicing elit. Nobis magni assumenda distinctio debitis, eum fuga fugiat error reiciendis.</p>
+                                <!-- <p>Lorem ipsum dolored is a sit ameted consectetur adipisicing elit. Nobis magni assumenda distinctio debitis, eum fuga fugiat error reiciendis.</p> -->
 
                                 <div class="newsletter-area">
                                     <form action="index.html">
@@ -24,10 +24,10 @@
                     <!-- Single Footer Widget End -->
 
                     <!-- Single Footer Widget Start -->
-                    <div class="col-lg-4 col-md-6">
+                    <!-- <div class="col-lg-4 col-md-6">
                         <div class="single-footer-widget">
-                            <h2>Recent Posts</h2>
-                            <div class="widget-body">
+                             <h2>Recent Posts</h2> 
+                             <div class="widget-body">
                                 <ul class="recent-post">
                                     <li>
                                         <a href="#">
@@ -54,13 +54,13 @@
                                        </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> 
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Single Footer Widget End -->
 
                     <!-- Single Footer Widget Start -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="single-footer-widget">
                             <h2>get touch</h2>
                             <div class="widget-body">
@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>

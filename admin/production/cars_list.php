@@ -20,16 +20,16 @@ if (isset($_POST['car_add'])) {
 
     /**
      * Image Uploads
-     * 
+     *
      * */
     $count = count($_FILES['car_rent_image']['name']);
 
     if ($count > 0) {
-        
+
         for ($i = 0; $i < $count; $i++) {
-            $no = $i + 1;
-            $file_oldName =  $_FILES['car_rent_image']['name'][$i];
-            $file_name    = $carDetails['make'] . "_" . $carDetails['model'] . "_" . $addCar."-".$no;
+            $no           = $i + 1;
+            $file_oldName = $_FILES['car_rent_image']['name'][$i];
+            $file_name    = $carDetails['make'] . "_" . $carDetails['model'] . "_" . $addCar . "-" . $no;
             $file_tmp     = $_FILES['car_rent_image']['tmp_name'][$i];
             $file_size    = $_FILES['car_rent_image']['size'][$i];
             $file_error   = $_FILES['car_rent_image']['error'][$i];
@@ -238,23 +238,23 @@ require "top_nav.php";
                                                 <input id="car_add" class="form-control" type="hidden" name="car_add"
                                                     value="1">
                                             </div>
+                                        </div>
+                                        <div class="item form-group">
+                                            <label for="car_rent_image"
+                                                class="col-form-label col-md-3 col-sm-3 label-align">Car Images</label>
+                                            <div class="col-md-4 col-sm-12">
+                                                <input id="car_rent_image[]" class="form-control" type="file" style=""
+                                                    accept=".jpg, .png" name="car_rent_image[]" multiple>
                                             </div>
-                                            <div class="item form-group">
-                                                <label for="car_rent_image"
-                                                    class="col-form-label col-md-3 col-sm-3 label-align">Car Images</label>
-                                                <div class="col-md-4 col-sm-12">
-                                                    <input id="car_rent_image[]" class="form-control" type="file" style=""
-                                                        accept=".jpg, .png" name="car_rent_image[]" multiple>
-                                                </div>
+                                        </div>
+                                        <div class="ln_solid"></div>
+                                        <div class="item form-group">
+                                            <div class="col-md-4 col-sm-12 offset-md-3">
+                                                <!-- <button class="btn btn-primary" type="button">Cancel</button> -->
+                                                <button class="btn btn-primary" type="reset">Reset</button>
+                                                <button type="submit" class="btn btn-success">Submit</button>
                                             </div>
-                                            <div class="ln_solid"></div>
-                                            <div class="item form-group">
-                                                <div class="col-md-4 col-sm-12 offset-md-3">
-                                                    <!-- <button class="btn btn-primary" type="button">Cancel</button> -->
-                                                    <button class="btn btn-primary" type="reset">Reset</button>
-                                                    <button type="submit" class="btn btn-success">Submit</button>
-                                                </div>
-                                            </div>
+                                        </div>
 
                                     </form>
                                 </div>
@@ -299,6 +299,7 @@ require "top_nav.php";
                                                             <th>Make</th>
                                                             <th>Model</th>
                                                             <th>Description</th>
+                                                            <th>Images</th>
                                                             <th>Transmission</th>
                                                             <th>No of Seats</th>
                                                             <th>Price per day</th>
@@ -310,6 +311,7 @@ require "top_nav.php";
                                                         <?php
 $carsList = getCars();
 // var_dump($carsList);
+
 $id     = 1;
 $result = $carsList;
 
@@ -318,7 +320,52 @@ foreach ($result as $row) {
     echo '<td>' . $id . '</td>';
     echo '<td>' . $row['1'] . '</td>';
     echo '<td>' . $row['2'] . '</td>';
-    echo '<td>' . $row['3'] . '</td>';
+    echo '<td>' . substr($row['3'], 0, 55) . '</td>';
+    //Display images
+    $imageList = getImages($row['0']);
+
+    $images         = $imageList;
+    $imageNull      = [];
+    $imagenull['0'] = "images/toyota-v8.jpg";
+    if ($images != "null") {
+        foreach ($images as $imagerow) {
+
+            echo '<td>
+
+            <div class="thumbnail">
+                <div class="image view view-first">
+                          <img src ="' . $imagerow['0'] . '" style="width: 100%; display: block;" />
+                        <div class="mask">
+                              <p>' . $imagerow['0'] . '</p>
+                              <div class="tools tools-bottom">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="#"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                </div>
+             </div>
+                          <td>';
+            // echo '<td>' . $imagerow['0'] . '</td>';
+
+        }
+    } else {
+        echo '
+        <td>
+            <div class="thumbnail">
+                <div class="image view view-first">
+                    <img src =" ' . $imagenull['0'] . ' "  style="width: 100%; display: block;"/>
+                        <div class="mask">
+                                <p>' . $imagenull['0'] . '</p>
+                                <div class="tools tools-bottom">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                    <a href="#"><i class="fa fa-pencil"></i></a>
+                                    <a href="#"><i class="fa fa-times"></i></a>
+                        </div>
+                </div>
+            </div>
+        </td>';
+    }
     echo '<td>' . $row['4'] . '</td>';
     echo '<td>' . $row['5'] . '</td>';
     echo '<td>' . $row['6'] . '</td>';
@@ -336,6 +383,7 @@ foreach ($result as $row) {
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                         <!-- /page content -->

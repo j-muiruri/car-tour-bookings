@@ -21,13 +21,13 @@
             <div class="container">
                 <div class="row">
                     <!-- Single Footer Widget Start -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="single-footer-widget">
                             <h2>About Us</h2>
                             <div class="widget-body">
                                 <img src="assets/img/logo.png" alt="JSOFT">
-                                <p>Whether it is corporate car hire, executive car hire, tours and travelm, organised trips, tires repair & tire sell, or 
-                                executive car wash you want, try us - we've got it. We love adventure travel and always have. There’s something about the feeling of packaging a trip and making it successful.</p>
+                                <!-- <p>Whether it is corporate car hire, executive car hire, tours and travelm, organised trips, tires repair & tire sell, or 
+                                executive car wash you want, try us - we've got it. We love adventure travel and always have. There’s something about the feeling of packaging a trip and making it successful.</p> -->
 
                                 <div class="newsletter-area">
                                     <form action="index.html">
@@ -42,7 +42,7 @@
                     <!-- Single Footer Widget End -->
 
                     <!-- Single Footer Widget Start -->
-                    <div class="col-lg-4 col-md-6">
+                    <!-- <div class="col-lg-4 col-md-6">
                         <div class="single-footer-widget">
                             <h2>Recent Posts</h2>
                             <div class="widget-body">
@@ -74,11 +74,11 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Single Footer Widget End -->
 
                     <!-- Single Footer Widget Start -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="single-footer-widget">
                             <h2>get touch</h2>
                             <div class="widget-body">
@@ -105,7 +105,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="https://windand.co.ke" target="_blank">Windand Developers</a>
+<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="https://windand.co.ke" target="_blank">Windand Developers</a> -->
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>

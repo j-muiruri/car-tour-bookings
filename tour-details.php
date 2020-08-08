@@ -33,7 +33,7 @@ else {
                     <div class="section-title  text-center">
                         <h2><?php  echo $tourDetails['name'];?></h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- Page Title End -->
@@ -53,18 +53,18 @@ else {
                         <b>Ksh. <?php  echo $tourDetails['price'].' for '.$tourDetails['days'].' Days';?> </b></span></h2>
                         <div class="car-preview-crousel">
                             <div class="single-car-preview">
-                                <img src="assets/img/car/car-5.jpg" alt="JSOFT">
+                                <img src="assets/img/tours/tours-and-travel.jpg" alt="JSOFT">
                             </div>
                             <div class="single-car-preview">
-                                <img src="assets/img/car/car-1.jpg" alt="JSOFT">
+                                <img src="assets/img/tours/safari-tours.jpg" alt="JSOFT">
                             </div>
                             <div class="single-car-preview">
-                                <img src="assets/img/car/car-6.jpg" alt="JSOFT">
+                                <img src="assets/img/tours/balloon-tours.jpg" alt="JSOFT">
                             </div>
                         </div>
                         <div class="car-details-info">
                             <h4>Additional Info</h4>
-                            <p><?php  echo $tourDetails['location'];?></p>
+                            <p><?php  echo $tourDetails['description'];?></p>
 
                             <div class="technical-info">
                                 <div class="row">
@@ -109,44 +109,7 @@ else {
                                 </div>
                             </div>
                             <!--Review  Area  start-->
-                            <div class="review-area">
-                                <h3>Be the first to review “<?php  echo $tourDetails['name'];?>”</h3>
-                                <div class="review-star">
-                                    <p class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star unmark"></i>
-                                        <i class="fa fa-star unmark"></i>
-                                    </p>
-                                </div>
-                                <div class="review-form">
-                                    <form action="index.html">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="name-input">
-                                                    <input type="text" placeholder="Full Name">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="email-input">
-                                                    <input type="email" placeholder="Email Address">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="message-input">
-                                            <textarea name="review" cols="30" rows="5" placeholder="Write Your Feedback Here!"></textarea>
-                                        </div>
-
-                                        <div class="input-submit">
-                                            <button type="submit">Submit</button>
-                                            <button type="reset">Clear</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

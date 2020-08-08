@@ -2,20 +2,19 @@
 
 /**
  * Tour Operations
- * 
+ *
  * */
-require  "config/db.config.php";
+require "config/db.config.php";
 
 /**
- * Add Tour to db 
+ * Add Tour to db
  * @return true
  * */
-function addTour($name, $location, $group_size, $package_type, $days, $price)
+function addTour($name, $location, $group_size, $package_type, $days, $price, $description)
 {
     $conn = dbConn();
-    $sql = "INSERT INTO tours (`name`, `location`, `group_size`, `package_type`, `days`, `price`) 
-    VALUES ('$name','$location','$group_size','$package_type','$days','$price')";
-
+    $sql  = "INSERT INTO tours (`name`, `location`, `group_size`, `package_type`, `days`, `price`, `description`)
+    VALUES ('$name','$location','$group_size','$package_type','$days','$price', '$description')";
 
     if ($conn->query($sql) === true) {
         echo "New record created successfully";
@@ -35,7 +34,7 @@ function addTour($name, $location, $group_size, $package_type, $days, $price)
 function getTours()
 {
     $conn = dbConn();
-    $sql = "SELECT `id`, `name`, `location`, `group_size`, `package_type`, `days`, `price` FROM tours";
+    $sql  = "SELECT `id`, `name`, `location`, `group_size`, `package_type`, `days`, `price`, `description` FROM tours";
     $data = $conn->query($sql);
     if ($data->num_rows > 0) {
         // echo "Record Obtained";
@@ -53,7 +52,7 @@ function getTours()
 function getTour($id)
 {
     $conn = dbConn();
-    $sql = "SELECT `id`,`name`, `location`, `group_size`, `package_type`, `days`, `price` FROM tours WHERE id = '$id'";
+    $sql  = "SELECT `id`,`name`, `location`, `group_size`, `package_type`, `days`, `price`, `description` FROM tours WHERE id = '$id'";
     $data = $conn->query($sql);
     if ($data->num_rows > 0) {
         // echo "Record Obtained";
@@ -67,12 +66,12 @@ function getTour($id)
  * Edit Tours
  * @return true
  * */
-function editTour($id, $name, $location, $group_size, $package_type, $days, $price)
+function editTour($id, $name, $location, $group_size, $package_type, $days, $price, $description)
 {
     $conn = dbConn();
-    $sql = "UPDATE tours 
+    $sql  = "UPDATE tours
     SET `name`='$name',`location`='$location',`group_size`='$group_size',
-    `package_type`='$package_type',`days`='$days',`price`='$price' WHERE`id` ='$id';";
+    `package_type`='$package_type',`days`='$days',`price`='$price', `description` = '$description' WHERE`id` ='$id';";
     $data = $conn->query($sql);
 
     if ($data === true) {
@@ -89,8 +88,7 @@ function editTour($id, $name, $location, $group_size, $package_type, $days, $pri
 function removeTour($id)
 {
     $conn = dbConn();
-    $sql = "DELETE FROM `tours` WHERE `id` ='$id'";
-
+    $sql  = "DELETE FROM `tours` WHERE `id` ='$id'";
 
     if ($conn->query($sql) === true) {
         // echo "Record deleted";
@@ -104,12 +102,11 @@ function removeTour($id)
 /**
  * Insert Images path after upload
  */
-function addImage($tourId,$pathname)
+function addImage($tourId, $pathname)
 {
-    $conn = dbConn();
+    $conn         = dbConn();
     $resourcetype = "tour";
-    $sql = "INSERT INTO `tour_images`(`name`, `image_id`, `type`) VALUES ('$pathname','$tourId', '$resourcetype')";
-
+    $sql          = "INSERT INTO `tour_images`(`name`, `image_id`, `type`) VALUES ('$pathname','$tourId', '$resourcetype')";
 
     if ($conn->query($sql) === true) {
         echo "Image uploaded successfully";
@@ -127,16 +124,16 @@ function addImage($tourId,$pathname)
 function getImages($tourId)
 {
     $conn = dbConn();
-    $sql ="SELECT name FROM tour_images WHERE image_id = '$tourId'";
+    $sql  = "SELECT name FROM tour_images WHERE image_id = '$tourId'";
 
     if ($data->num_rows > 0) {
         // echo "Images Obtained";
         $result = $data->fetch_all();
-
-            return $result;
+        return $result;
     } else {
-
-        return "Error: " . $sql . "<br>" . $conn->error;
+// echo "Error: " . $sql . "<br>" . $conn->error;
+        $result = "null";
+        return $result;
     }
 
     $conn->close();
@@ -148,8 +145,8 @@ function getImages($tourId)
 function editImage($id, $image_id, $name)
 {
     $conn = dbConn();
-    
-    $sql ="UPDATE tour_images SET name ='$name', image_id='$image_id' WHERE id ='$id'";
+
+    $sql = "UPDATE tour_images SET name ='$name', image_id='$image_id' WHERE id ='$id'";
 
     if ($data === true) {
         //echo "Image updated successfully";
@@ -168,7 +165,7 @@ function editImage($id, $image_id, $name)
 function removeImage($id)
 {
     $conn = dbConn();
-    $sql = "DELETE FROM `tour_images` WHERE `id` ='$id'";
+    $sql  = "DELETE FROM `tour_images` WHERE `id` ='$id'";
 
     if ($conn->query($sql) === true) {
         // echo "Record deleted";

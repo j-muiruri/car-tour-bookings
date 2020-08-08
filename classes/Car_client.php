@@ -7,25 +7,6 @@
 require  "config/db.config.php";
 
 /**
- * Add Car to db 
- * @return true
- * */
-function addCar($model, $make, $description, $pricing, $seats, $transmission)
-{
-    $conn = dbConn();
-    $sql = "INSERT INTO rent_car(make, model, description, transmision, seats, price) 
-    VALUES ('$make','$model','$description','$transmission','$seats','$pricing')";
-
-
-    if ($conn->query($sql) === true) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $conn->close();
-}
-/**
  * List Cars
  * @return $result
  * */

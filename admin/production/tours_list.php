@@ -14,7 +14,8 @@ if (isset($_POST['tour_add'])) {
     $package_type = $_POST['tour_package'];
     $days = $_POST['tour_days'];
     $price = $_POST['tour_price'];
-    $addTour = addTour($name, $location, $group_size, $package_type, $days, $price);
+    $description = $_POST['tour_desc'];
+    $addTour = addTour($name, $location, $group_size, $package_type, $days, $price, $description);
     $tourId        = $addTour;
     $tourDetails   = getTour($tourId);
 
@@ -229,6 +230,13 @@ if (isset($_POST['tour_add'])) {
                                             </div>
                                         </div>
                                         <div class="item form-group">
+                                            <label for="tour_desc" class="col-form-label col-md-3 col-sm-3 label-align">Tour Description</label>
+                                            <div class="col-md-4 col-sm-12 ">
+
+                                                <textarea id="tour_desc" class="form-control" rows="5" name="tour_desc" required  data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long description..." data-parsley-validation-threshold="10"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="item form-group">
                                             <label for="tour_price"
                                                 class="col-form-label col-md-3 col-sm-3 label-align">Booking Price (Ksh.
                                                 )</label>
@@ -309,6 +317,8 @@ if (isset($_POST['tour_add'])) {
                                                             <th>Name</th>
                                                             <th>Location</th>
                                                             <th>Group Size</th>
+                                                            <th>Description</th>
+                                                            <th>Images</th>
                                                             <th>Package Type</th>
                                                             <th>No of Days</th>
                                                             <th>Price</th>
@@ -317,19 +327,67 @@ if (isset($_POST['tour_add'])) {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                    <?php
-                                                    $toursList= getTours();
-                                                    // var_dump($toursList);
-                                                    $id = 1;
-                                                    $result = $toursList;
-                                                   
-                                                    foreach ($result as $row) 
-                                                    {
-                                                        echo ' <tr id=tour_'.$row['0'].'>';
-                                                        echo '<td>' . $id . '</td>';
-                                                        echo '<td>' . $row['1'] . '</td>';
-                                                        echo '<td>' . $row['2'] . '</td>';
-                                                        echo '<td>' . $row['3'] . '</td>';
+<?php
+$toursList= getTours();
+
+$id = 1;
+$result = $toursList;
+
+foreach ($result as $row) 
+{
+    echo ' <tr id=tour_'.$row['0'].'>';
+    echo '<td>' . $id . '</td>';
+    echo '<td>' . $row['1'] . '</td>';
+    echo '<td>' . $row['2'] . '</td>';
+    echo '<td>' . $row['3'] . '</td>';
+    echo '<td>' . substr($row['7'], 0, 50). '</td>';
+
+                                                         //Display images
+    $imageList = getImages($row['0']);
+
+    $images         = $imageList;
+    $imageNull      = [];
+    $imagenull['0'] = "images/tours2.jpg";
+    if ($images != "null") {
+        foreach ($images as $imagerow) {
+
+            echo '<td> 
+            
+            <div class="thumbnail">
+                <div class="image view view-first">
+                          <img src ="' . $imagerow['0']. '" style="width: 100%; display: block;" />
+                        <div class="mask">
+                              <p>'. $imagerow['0'] . '</p>
+                              <div class="tools tools-bottom">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="#"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                </div>
+             </div>
+                          <td>';
+            // echo '<td>' . $imagerow['0'] . '</td>';
+
+        }
+    } else {
+        echo '
+        <td>
+            <div class="thumbnail">
+                <div class="image view view-first">
+                    <img src =" '. $imagenull['0'] . ' "  style="width: 100%; display: block;"/>
+                        <div class="mask">
+                                <p>'. $imagenull['0'] . '</p>
+                                <div class="tools tools-bottom">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                    <a href="#"><i class="fa fa-pencil"></i></a>
+                                    <a href="#"><i class="fa fa-times"></i></a>
+                        </div>
+                </div>
+            </div>
+        </td>';
+    }
+
                                                         echo '<td>' . $row['4'] . '</td>';
                                                         echo '<td>' . $row['5'] . '</td>';
                                                         echo '<td>' . $row['6'] . '</td>';

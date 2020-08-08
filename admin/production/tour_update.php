@@ -16,7 +16,8 @@ if (isset($_POST['tour_upd_id'])) {
     $package_type = $_POST['tour_package'];
     $days = $_POST['tour_days'];
     $price = $_POST['tour_price'];
-    editTour($id, $name, $location, $group_size, $package_type, $days, $price);
+    $description = $_POST['tour_desc'];
+    editTour($id, $name, $location, $group_size, $package_type, $days, $price, $description);
     // return to home
     header("Location: tours_list.php#tour_".$id);
 }
@@ -180,11 +181,18 @@ if (isset($_POST['tour_upd_id'])) {
                                             </div>
                                         </div>
                                         <div class="item form-group">
+                                            <label for="tour_desc" class="col-form-label col-md-3 col-sm-3 label-align">Tour Description</label>
+                                            <div class="col-md-4 col-sm-12 ">
+                                                <textarea id="tour_desc" class="form-control" rows="5" name="tour_desc" required value="<?php echo $tourDetails['description']; ?>" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long description.." data-parsley-validation-threshold="10"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="item form-group">
                                             <label for="tour_days" class="col-form-label col-md-3 col-sm-3 label-align">No of Days</label>
                                             <div class="col-md-4 col-sm-12 ">
 
                                                 <input id="tour_days" class="form-control" type="number" name="tour_days" required value="<?php echo $tourDetails['days']; ?>">
-                                                <input id="tour_upd_id" class="form-control" type="hidden" name="tour_upd_id" value="<?php echo $tourDetails['id']; ?>">
+                                                <input id="tour_upd_id" class="form-control" type="hidden" 
+                                                name="tour_upd_id" value="<?php echo $tourDetails['id']; ?>">
                                             </div>
                                         </div>
                                         <div class="ln_solid"></div>

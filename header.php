@@ -58,12 +58,11 @@
                                 <li><a href="services.php">Services</a></li>
                                 <li><a href="our-cars.php">Cars</a></li>
                                 <li><a href="our-tours.php">Tours</a></li>
+                                
 
-                                <li><a href="#">About </a>
-                                    <ul><li><a href="about.php">About Jofra</a></li>
-                                        <li><a href="faq.php">FAQ</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="about.php">About Jofra</a></li>
+                                
+
                                 <li><a href="gallery.php">Gallery</a></li>
                                 <li><a href="contact.php">Contact</a></li>
                             </ul>

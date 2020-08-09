@@ -1,0 +1,19 @@
+[09-Jul-2020 23:07:18 UTC] PHP Warning:  require(.admin/production/classes/Car.php): failed to open stream: No such file or directory in /home/jofra/public_html/index.php on line 3
+[09-Jul-2020 23:07:18 UTC] PHP Warning:  require(.admin/production/classes/Car.php): failed to open stream: No such file or directory in /home/jofra/public_html/index.php on line 3
+[09-Jul-2020 23:07:18 UTC] PHP Fatal error:  require(): Failed opening required '.admin/production/classes/Car.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/jofra/public_html/index.php on line 3
+[09-Jul-2020 23:07:47 UTC] PHP Warning:  require(./config/db.config.php): failed to open stream: No such file or directory in /home/jofra/public_html/admin/production/classes/Car.php on line 7
+[09-Jul-2020 23:07:47 UTC] PHP Warning:  require(./config/db.config.php): failed to open stream: No such file or directory in /home/jofra/public_html/admin/production/classes/Car.php on line 7
+[09-Jul-2020 23:07:47 UTC] PHP Fatal error:  require(): Failed opening required './config/db.config.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/jofra/public_html/admin/production/classes/Car.php on line 7
+[09-Jul-2020 23:07:52 UTC] PHP Warning:  require(./config/db.config.php): failed to open stream: No such file or directory in /home/jofra/public_html/admin/production/classes/Car.php on line 7
+[09-Jul-2020 23:07:52 UTC] PHP Warning:  require(./config/db.config.php): failed to open stream: No such file or directory in /home/jofra/public_html/admin/production/classes/Car.php on line 7
+[09-Jul-2020 23:07:52 UTC] PHP Fatal error:  require(): Failed opening required './config/db.config.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/jofra/public_html/admin/production/classes/Car.php on line 7
+[09-Jul-2020 23:14:20 UTC] PHP Warning:  require(www.jofrasafaris.co.ke/admin/production/classes/Car.php): failed to open stream: No such file or directory in /home/jofra/public_html/index.php on line 3
+[09-Jul-2020 23:14:20 UTC] PHP Warning:  require(www.jofrasafaris.co.ke/admin/production/classes/Car.php): failed to open stream: No such file or directory in /home/jofra/public_html/index.php on line 3
+[09-Jul-2020 23:14:20 UTC] PHP Fatal error:  require(): Failed opening required 'www.jofrasafaris.co.ke/admin/production/classes/Car.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/jofra/public_html/index.php on line 3
+[11-Jul-2020 22:29:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/index.php on line 662
+[15-Jul-2020 04:57:43 UTC] PHP Fatal error:  Call to undefined function dbconn() in /home/jofra/public_html/classes/Tour_client.php on line 52
+[15-Jul-2020 05:03:05 UTC] PHP Fatal error:  Cannot redeclare dbConn() (previously declared in /home/jofra/public_html/config/db.config.php:10) in /home/jofra/public_html/config/db.config.php on line 10
+[15-Jul-2020 05:08:58 UTC] PHP Fatal error:  Cannot redeclare dbConn() (previously declared in /home/jofra/public_html/config/db.config.php:10) in /home/jofra/public_html/config/db.config.php on line 10
+[15-Jul-2020 05:18:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/classes/Tour_client.php:60) in /home/jofra/public_html/tour-details.php on line 14
+[15-Jul-2020 05:19:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/classes/Tour_client.php:60) in /home/jofra/public_html/tour-details.php on line 14
+[15-Jul-2020 05:21:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/classes/Tour_client.php:60) in /home/jofra/public_html/tour-details.php on line 14

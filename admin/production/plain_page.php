@@ -3,23 +3,18 @@
  * Admin Page for Cars
  *
  * */
-require "./classes/Car_admin.php";
-$id = $_GET['id'];
-$carDetails = getCar($id);
+require "./classes/Car.php";
 
-if (isset($_POST['car_upd_id'])) {
-    $id = $_POST['car_upd_id'];
+if (isset($_POST['car_add'])) {
     $model = $_POST['car_model'];
     $make = $_POST['car_make'];
     $description = $_POST['car_description'];
     $pricing = $_POST['car_rent_price'];
     $seats = $_POST['car_rent_seats'];
     $transmission = $_POST['car_transmission'];
-    $addCar = editCar($id, $model, $make, $description, $pricing, $seats, $transmission);
-    // return to home
-    header("Location: cars_list.php#car_".$id);
+    $addCar = addCar($model, $make, $description, $pricing, $seats, $transmission);
 }
-                                    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +26,7 @@ if (isset($_POST['car_upd_id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jofra Admin - Edit Car - <?php  echo $carDetails['make'];?> </title>
+    <title>Jofra Admin</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -109,8 +104,7 @@ if (isset($_POST['car_upd_id'])) {
                         <div class="col-md-12 col-sm-12  ">
                             <div class="x_panel">
                                 <div class="x_title">
-                                
-                                    <h2>Update Car - <?php  echo $carDetails['make'];?> - Form</h2>
+                                    <h2>Add Car - Form</h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
@@ -128,7 +122,6 @@ if (isset($_POST['car_upd_id'])) {
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-                                    
                                     <br />
                                     <form id="demo-form2" method="POST" data-parsley-validate
                                         class="form-horizontal form-label-left">
@@ -139,7 +132,7 @@ if (isset($_POST['car_upd_id'])) {
                                             </label>
                                             <div class="col-md-4 col-sm-12 ">
                                                 <input type="text" id="car_make" name="car_make" required="required"
-                                                    class="form-control" value ="<?php echo $carDetails['make'];?>" >
+                                                    class="form-control ">
                                             </div>
                                         </div>
                                         <div class="item form-group">
@@ -148,7 +141,7 @@ if (isset($_POST['car_upd_id'])) {
                                             </label>
                                             <div class="col-md-4 col-sm-12 ">
                                                 <input type="text" id="car_model" name="car_model" required="required"
-                                                    class="form-control" value ="<?php echo $carDetails['model'];?>" >
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="item form-group">
@@ -156,7 +149,7 @@ if (isset($_POST['car_upd_id'])) {
                                                 class="col-form-label col-md-3 col-sm-3 label-align">Description</label>
                                             <div class="col-md-4 col-sm-12 ">
                                                 <input id="car_description" class="form-control" type="text"
-                                                    name="car_description" required value ="<?php echo $carDetails['description'];?>" >
+                                                    name="car_description" required>
                                             </div>
                                         </div>
                                         <div class="item form-group">
@@ -166,7 +159,7 @@ if (isset($_POST['car_upd_id'])) {
                                                 <div id="car_transmission" class="btn-group" data-toggle="buttons">
                                                     <label class="btn btn-danger" data-toggle-class="btn-primary"
                                                         data-toggle-passive-class="btn-default">
-                                                        <input type="radio" name="car_transmission" value ="manual"
+                                                        <input type="radio" name="car_transmission" value="manual"
                                                             class="join-btn" required> &nbsp; Manual &nbsp;
                                                     </label>
                                                     <label class="btn btn-primary" data-toggle-class="btn-primary"
@@ -184,7 +177,7 @@ if (isset($_POST['car_upd_id'])) {
                                             <div class="col-md-4 col-sm-12 ">
 
                                                 <input id="car_rent_price" class="form-control" type="number"
-                                                    name="car_rent_price" required value ="<?php echo $carDetails['price'];?>" >
+                                                    name="car_rent_price" required>
                                             </div>
                                         </div>
                                         <div class="item form-group">
@@ -193,21 +186,100 @@ if (isset($_POST['car_upd_id'])) {
                                             <div class="col-md-4 col-sm-12 ">
 
                                                 <input id="car_rent_seats" class="form-control" type="number"
-                                                    name="car_rent_seats" required value ="<?php echo $carDetails['seats'];?>" >
-                                                <input id="car_upd_id" class="form-control" type="hidden" name="car_upd_id"
-                                                    value ="<?php echo $carDetails['id'];?>">
+                                                    name="car_rent_seats" required>
+                                                <input id="car_add" class="form-control" type="hidden" name="car_add"
+                                                    value="1">
                                             </div>
                                         </div>
                                         <div class="ln_solid"></div>
                                         <div class="item form-group">
                                             <div class="col-md-4 col-sm-12 offset-md-3">
                                                 <!-- <button class="btn btn-primary" type="button">Cancel</button> -->
-                                                <!-- <button class="btn btn-primary" type="reset">Reset</button> -->
+                                                <button class="btn btn-primary" type="reset">Reset</button>
                                                 <button type="submit" class="btn btn-success">Submit</button>
                                             </div>
                                         </div>
 
                                     </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 ">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>List of Cars<small>Users</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Settings 1</a>
+                                                <a class="dropdown-item" href="#">Settings 2</a>
+                                            </div>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="card-box table-responsive">
+                                                <p class="text-muted font-13 m-b-30">
+                                                    Responsive is an extension for DataTables that resolves that problem
+                                                    by optimising the table's layout for different screen sizes through
+                                                    the dynamic insertion and removal of columns from the table.
+                                                </p>
+
+                                                <table id="datatable-responsive"
+                                                    class="table table-striped table-bordered dt-responsive nowrap"
+                                                    cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ID</th>
+                                                            <th>Make</th>
+                                                            <th>Model</th>
+                                                            <th>Description</th>
+                                                            <th>Transmission</th>
+                                                            <th>Price per day</th>
+                                                            <th>No of Seats</th>
+                                                            <th>Edit Actions</th>
+                                                            <th>Delete Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <?php
+                                                    $carsList = getCars();
+                                                    // var_dump($carsList);
+                                                    $id = 1;
+                                                    $result = $carsList;
+                                                   
+                                                    foreach ($result as $row) 
+                                                    {
+                                                        echo ' <tr>';
+                                                        echo '<td>' . $id . '</td>';
+                                                        echo '<td>' . $row['1'] . '</td>';
+                                                        echo '<td>' . $row['2'] . '</td>';
+                                                        echo '<td>' . $row['3'] . '</td>';
+                                                        echo '<td>' . $row['4'] . '</td>';
+                                                        echo '<td>' . $row['5'] . '</td>';
+                                                        echo '<td>' . $row['6'] . '</td>';
+                                                        echo '<td><a class="btn btn-success" href="car_update.php?id='. $row['0'] .'">Edit</a></td>';
+                                                        echo '<td><a class="btn btn-danger" href="car_delete.php?id='. $row['0'] .'">Delete</a></td>';
+                                                        echo ' </tr>';
+                                                        ++$id;
+                                                    }
+                                                    ?>
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

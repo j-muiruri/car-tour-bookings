@@ -1,0 +1,41 @@
+[12-Jul-2020 12:33:50 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/jofra/public_html/admin/production/index.php on line 38
+[12-Jul-2020 12:56:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/index.php:35) in /home/jofra/public_html/admin/production/index.php on line 79
+[12-Jul-2020 12:56:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/index.php:35) in /home/jofra/public_html/admin/production/index.php on line 79
+[12-Jul-2020 13:04:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/index.php:35) in /home/jofra/public_html/admin/production/index.php on line 79
+[16-Jul-2020 06:46:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:46:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:46:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:46:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:46:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:46:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:46:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:47:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:47:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:47:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:47:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:47:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:47:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:47:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:48:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:48:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:48:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:48:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:48:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:48:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:48:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:54:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:54:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:54:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:54:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:54:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:54:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:54:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/cars_list.php on line 331
+[16-Jul-2020 06:57:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jofra/public_html/admin/production/tours_list.php on line 336
+[07-Aug-2020 13:51:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/classes/Car_admin.php:98) in /home/jofra/public_html/admin/production/car_delete.php on line 12
+[07-Aug-2020 13:51:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/classes/Car_admin.php:98) in /home/jofra/public_html/admin/production/car_delete.php on line 12
+[07-Aug-2020 13:51:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/classes/Car_admin.php:98) in /home/jofra/public_html/admin/production/car_delete.php on line 12
+[07-Aug-2020 13:52:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/classes/Tour_admin.php:97) in /home/jofra/public_html/admin/production/tour_delete.php on line 12
+[07-Aug-2020 13:52:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/classes/Tour_admin.php:97) in /home/jofra/public_html/admin/production/tour_delete.php on line 12
+[07-Aug-2020 13:52:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/classes/Tour_admin.php:97) in /home/jofra/public_html/admin/production/tour_delete.php on line 12
+[07-Aug-2020 13:52:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/classes/Car_admin.php:98) in /home/jofra/public_html/admin/production/car_delete.php on line 12
+[07-Aug-2020 13:52:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jofra/public_html/admin/production/classes/Tour_admin.php:97) in /home/jofra/public_html/admin/production/tour_delete.php on line 12

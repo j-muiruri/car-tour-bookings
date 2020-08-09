@@ -17,12 +17,12 @@ function addTour($name, $location, $group_size, $package_type, $days, $price, $d
     VALUES ('$name','$location','$group_size','$package_type','$days','$price', '$description')";
 
     if ($conn->query($sql) === true) {
-        echo "New record created successfully";
-
-        return $conn->insert_id;
+        $result['id'] = $conn->insert_id;
+        $result['add']  = true;
+        return $result;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-
+        $result['add']  =false;
+        $result['msg'] =  "Error: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
@@ -42,7 +42,8 @@ function getTours()
 
         return $result;
     } else {
-        return "Error: " . $sql . "<br>" . $conn->error;
+        $result['msg'] = "Error: " . $sql . "<br>" . $conn->error;
+        return $result;
     }
 }
 /**
@@ -76,10 +77,12 @@ function editTour($id, $name, $location, $group_size, $package_type, $days, $pri
 
     if ($data === true) {
         //echo "New record updated successfully";
-        return true;
+        $result['edit']  = true;
+        return $result;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-        // return $result;
+        $result['edit']  = false;
+        $result['msg'] = "Error: " . $sql . "<br>" . $conn->error;
+        return $result;
     }
 }
 /**
@@ -109,10 +112,13 @@ function addImage($tourId, $pathname)
     $sql          = "INSERT INTO `tour_images`(`name`, `image_id`, `type`) VALUES ('$pathname','$tourId', '$resourcetype')";
 
     if ($conn->query($sql) === true) {
-        echo "Image uploaded successfully";
-        return true;
+        $result['add_img'] =  true;
+        $result['msg'] =  "Image uploaded successfully";
+        return $result;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $result['msg'] =   "Error: " . $sql . "<br>" . $conn->error;
+        $result['add_img'] =  false;
+        return $result;
     }
 
     $conn->close();
@@ -131,7 +137,7 @@ function getImages($tourId)
         $result = $data->fetch_all();
         return $result;
     } else {
-// echo "Error: " . $sql . "<br>" . $conn->error;
+        // echo "Error: " . $sql . "<br>" . $conn->error;
         $result = "null";
         return $result;
     }

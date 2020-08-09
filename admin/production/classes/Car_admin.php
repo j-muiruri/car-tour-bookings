@@ -2,12 +2,12 @@
 
 /**
  * Car Operations
- * 
+ *
  * */
 require  "config/db.config.php";
 
 /**
- * Add Car to db 
+ * Add Car to db
  * @return true
  * */
 function addCar($model, $make, $description, $pricing, $seats, $transmission)
@@ -18,15 +18,13 @@ function addCar($model, $make, $description, $pricing, $seats, $transmission)
 
 
     if ($conn->query($sql) === true) {
-        echo "New record created successfully";
-
-        return $conn->insert_id;
+        $result['id'] = $conn->insert_id;
+        $result['add']  = true;
+        return $result;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-        
+        $result['add']  =false;
+        $result['msg'] =  "Error: " . $sql . "<br>" . $conn->error;
     }
-
-    
 }
 /**
  * List Cars
@@ -41,7 +39,7 @@ function getCars()
         // echo "Record Obtained";
         $result = $data->fetch_all();
         
-            return $result;
+        return $result;
     } else {
         return "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -60,7 +58,8 @@ function getCar($id)
         $result = $data->fetch_assoc();
         return $result;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $result['msg'] = "Error: " . $sql . "<br>" . $conn->error;
+        return $result;
     }
 }
 /**
@@ -76,9 +75,12 @@ function editCar($id, $model, $make, $description, $pricing, $seats, $transmissi
 
     if ($data === true) {
         //echo "New record updated successfully";
-        return true;
+        
+        $result['edit']  = true;
+        return $result;
     } else {
-        $result = "Error: " . $sql . "<br>" . $conn->error;
+        $result['edit']  = false;
+        $result['msg'] = "Error: " . $sql . "<br>" . $conn->error;
         return $result;
     }
 }
@@ -93,9 +95,11 @@ function removeCar($id)
 
     if ($conn->query($sql) === true) {
         // echo "Record deleted";
-        return true;
+        $result['delete'] =  true;
+        return $result;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $result['delete'] =  false;
+        $result['msg'] =  "Error: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
@@ -103,7 +107,7 @@ function removeCar($id)
 /**
  * Insert Images path after upload
  */
-function addImage($carId,$pathname)
+function addImage($carId, $pathname)
 {
     $conn = dbConn();
     $resourcetype = "car";
@@ -111,10 +115,13 @@ function addImage($carId,$pathname)
 
 
     if ($conn->query($sql) === true) {
-        echo "Image uploaded successfully";
-        return true;
+        $result['add_img'] =  true;
+        $result['msg'] =  "Image uploaded successfully";
+        return $result;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $result['msg'] =   "Error: " . $sql . "<br>" . $conn->error;
+        $result['add_img'] =  false;
+        return $result;
     }
 
     $conn->close();
@@ -122,7 +129,7 @@ function addImage($carId,$pathname)
 /**
  * List  Car Images
  *@return $result
- * 
+ *
  * */
 function getImages($carId)
 {
@@ -134,9 +141,9 @@ function getImages($carId)
         // echo "Images Obtained";
         $result = $data->fetch_all();
 
-            return $result;
+        return $result;
     } else {
-// echo "Error: " . $sql . "<br>" . $conn->error;
+        // echo "Error: " . $sql . "<br>" . $conn->error;
         $result ="null";
         return $result;
     }

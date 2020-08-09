@@ -25,7 +25,6 @@ if (isset($_POST['car_add'])) {
     $count = count($_FILES['car_rent_image']['name']);
 
     if ($count > 0) {
-
         for ($i = 0; $i < $count; $i++) {
             $no           = $i + 1;
             $file_oldName = $_FILES['car_rent_image']['name'][$i];
@@ -74,7 +73,7 @@ if (isset($_POST['car_add'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jofra Admin - Cars-add,list and delete</title>
+    <title>Jofra Admin - Cars List</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -93,7 +92,8 @@ if (isset($_POST['car_add'])) {
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Jofra Admin</span></a>
+                        <a href="dashboard_main.php" class="site_title"><i class="fa fa-paw"></i> <span>Jofra
+                                Dashboard</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -134,150 +134,17 @@ require "top_nav.php";
                             <h3>Car Bookings</h3>
                         </div>
 
-                        <div class="title_right">
-                            <div class="col-md-5 col-sm-5   form-group pull-right top_search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">Go!</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
 
                     <div class="clearfix"></div>
 
                     <div class="row">
-                        <div class="col-md-12 col-sm-12  ">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Add Car - Form</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Settings 1</a>
-                                                <a class="dropdown-item" href="#">Settings 2</a>
-                                            </div>
-                                        </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-                                    <br />
-                                    <form id="demo-form2" enctype="multipart/form-data" method="POST"
-                                        data-parsley-validate class="form-horizontal form-label-left">
-
-                                        <div class="item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3 label-align"
-                                                for="car_make">Make<span class="required">*</span>
-                                            </label>
-                                            <div class="col-md-4 col-sm-12 ">
-                                                <input type="text" id="car_make" name="car_make" required="required"
-                                                    class="form-control ">
-                                            </div>
-                                        </div>
-                                        <div class="item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3 label-align"
-                                                for="car_model">Model <span class="required">*</span>
-                                            </label>
-                                            <div class="col-md-4 col-sm-12 ">
-                                                <input type="text" id="car_model" name="car_model" required="required"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="item form-group">
-                                            <label for="car_description"
-                                                class="col-form-label col-md-3 col-sm-3 label-align">Description</label>
-                                            <div class="col-md-4 col-sm-12 ">
-                                                <input id="car_description" class="form-control" type="text"
-                                                    name="car_description" required>
-                                            </div>
-                                        </div>
-                                        <div class="item form-group">
-                                            <label
-                                                class="col-form-label col-md-3 col-sm-3 label-align">Transmission(Auto/Manual)</label>
-                                            <div class="col-md-4 col-sm-12 ">
-                                                <div id="car_transmission" class="btn-group" data-toggle="buttons">
-                                                    <label class="btn btn-danger" data-toggle-class="btn-primary"
-                                                        data-toggle-passive-class="btn-default">
-                                                        <input type="radio" name="car_transmission" value="manual"
-                                                            class="join-btn" required> &nbsp; Manual &nbsp;
-                                                    </label>
-                                                    <label class="btn btn-primary" data-toggle-class="btn-primary"
-                                                        data-toggle-passive-class="btn-default">
-                                                        <input type="radio" name="car_transmission" value="auto"
-                                                            class="join-btn" required> Auto
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item form-group">
-                                            <label for="car_rent_price"
-                                                class="col-form-label col-md-3 col-sm-3 label-align">Booking Price (Ksh.
-                                                )</label>
-                                            <div class="col-md-4 col-sm-12 ">
-
-                                                <input id="car_rent_price" class="form-control" type="number"
-                                                    name="car_rent_price" required>
-                                            </div>
-                                        </div>
-                                        <div class="item form-group">
-                                            <label for="car_rent_seats"
-                                                class="col-form-label col-md-3 col-sm-3 label-align">No of Seats</label>
-                                            <div class="col-md-4 col-sm-12 ">
-
-                                                <input id="car_rent_seats" class="form-control" type="number"
-                                                    name="car_rent_seats" required>
-                                                <input id="car_add" class="form-control" type="hidden" name="car_add"
-                                                    value="1">
-                                            </div>
-                                            </div>
-                                            <div class="item form-group">
-                                                <label for="car_rent_image"
-                                                    class="col-form-label col-md-3 col-sm-3 label-align">Car Images</label>
-                                                <div class="col-md-4 col-sm-12">
-                                                    <input id="car_rent_image[]" class="form-control" type="file" style=""
-                                                        accept=".jpg, .png" name="car_rent_image[]" multiple>
-                                                </div>
-                                            </div>
-                                            <div class="ln_solid"></div>
-                                            <div class="item form-group">
-                                                <div class="col-md-4 col-sm-12 offset-md-3">
-                                                    <!-- <button class="btn btn-primary" type="button">Cancel</button> -->
-                                                    <button class="btn btn-primary" type="reset">Reset</button>
-                                                    <button type="submit" class="btn btn-success">Submit</button>
-                                                </div>
-                                            </div>
-
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md-12 col-sm-12 ">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>List of Cars<small>Users</small></h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Settings 1</a>
-                                                <a class="dropdown-item" href="#">Settings 2</a>
-                                            </div>
-                                        </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                        </li>
-                                    </ul>
+                                    <h2>List of Cars<small></small></h2>
+
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
@@ -285,12 +152,10 @@ require "top_nav.php";
                                         <div class="col-sm-12">
                                             <div class="card-box table-responsive">
                                                 <p class="text-muted font-13 m-b-30">
-                                                    Responsive is an extension for DataTables that resolves that problem
-                                                    by optimising the table's layout for different screen sizes through
-                                                    the dynamic insertion and removal of columns from the table.
+
                                                 </p>
 
-                                                <table id="datatable-responsive"
+                                                <table id="cars_list"
                                                     class="table table-striped table-bordered dt-responsive nowrap"
                                                     cellspacing="0" width="100%">
                                                     <thead>
@@ -320,7 +185,7 @@ foreach ($result as $row) {
     echo '<td>' . $id . '</td>';
     echo '<td>' . $row['1'] . '</td>';
     echo '<td>' . $row['2'] . '</td>';
-    echo '<td>' . substr($row['3'] , 0, 55). '</td>';
+    echo '<td>' . substr($row['3'], 0, 55). '</td>';
     //Display images
     $imageList = getImages($row['0']);
 
@@ -329,7 +194,6 @@ foreach ($result as $row) {
     $imagenull['0'] = "images/toyota-v8.jpg";
     if ($images != "null") {
         foreach ($images as $imagerow) {
-
             echo '<td> 
             
             <div class="thumbnail">
@@ -347,7 +211,6 @@ foreach ($result as $row) {
              </div>
                           <td>';
             // echo '<td>' . $imagerow['0'] . '</td>';
-
         }
     } else {
         echo '
@@ -404,9 +267,30 @@ require "./footer.php"
                 <script src="../vendors/fastclick/lib/fastclick.js"></script>
                 <!-- NProgress -->
                 <script src="../vendors/nprogress/nprogress.js"></script>
+                <!-- Datatables -->
+                <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+                <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+                <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+                <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+                <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+                <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+                <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+                <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+                <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+                <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+                <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+                <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+                <script src="../vendors/jszip/dist/jszip.min.js"></script>
+                <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+                <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
                 <!-- Custom Theme Scripts -->
                 <script src="../build/js/custom.min.js"></script>
+                <script>
+                $(document).ready(function() {
+                    $('#cars_list').DataTable();
+                });
+                </script>
 </body>
 
 </html>

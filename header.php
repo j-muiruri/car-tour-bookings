@@ -63,7 +63,6 @@
                                 <li><a href="about.php">About Jofra</a></li>
                                 
 
-                                <li><a href="gallery.php">Gallery</a></li>
                                 <li><a href="contact.php">Contact</a></li>
                             </ul>
                         </nav>

@@ -432,11 +432,37 @@
                                         ?>
                                             <div class="col-lg-4 col-md-6 suv bus saloon">
                                                 <div class="single-popular-car">
-                                                    <div class="p-car-thumbnails">
-                                                        <a class="car-hover" href="assets/img/car/toyota-v8.jpg">
-                                                            <img src="assets/img/car/toyota-v8.jpg" alt="JSOFT">
-                                                        </a>
-                                                    </div>
+
+                                                <?php
+                                //Display images
+                                $imageList = getImages($row['0']);
+
+                                $images = $imageList;
+                                $imageNull = [];
+                                $imagenull['0'] = "images/toyota-v8.jpg";
+                                if ($images != "null") {
+                                    foreach ($images as $imagerow):
+                                        echo '
+
+                                                <div class="p-car-thumbnails">
+                                                    <a class="car-hover" href="#">
+
+                                                        <img src="admin/production/'.$imagerow['0'].' " alt="JSOFT">
+                                                    </a>
+                                                </div>';
+                                    endforeach;
+                                } else {
+                                    echo '
+
+                                                <div class="p-car-thumbnails">
+                                                    <a class="car-hover" href="#">
+
+                                                        <img src="admin/production/'.$imagenull['0'].' " alt="JSOFT">
+                                                    </a>
+                                                </div>';
+                                }
+                                    ?>
+
 
                                                     <div class="p-car-content">
                                                         <h3>
@@ -468,6 +494,8 @@
                                         endforeach;
                                         ?>
                                         <!-- Single Popular Car End -->
+                                        <h4><a class='rent-btn' href="our-cars.php">View More Cars</a></h4>
+                                       
                                     </div>
                                     <!-- PopularCars Tab Content End -->
                                 </div>
@@ -542,11 +570,36 @@
                                         ?>
                                         <div class="col-lg-4 col-md-6 con suv mpv">
                                             <div class="single-popular-car">
+                                                
+                                            <?php
+                                //Display images
+                                $imageList = getTourImages($row['0']);
+
+                                $images = $imageList;
+                                $imageNull = [];
+                                $imagenull['0'] = "images/tours2.jpg";
+                                if ($images != "null") {
+                                    foreach ($images as $imagerow):
+                                        echo '
+
                                                 <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="assets/img/tours/tours-and-travel.jpg">
-                                                        <img src="assets/img/tours/tours-and-travel.jpg" alt="JSOFT">
+                                                    <a class="car-hover" href="#">
+
+                                                        <img src="admin/production/'.$imagerow['0'].' " alt="JSOFT">
                                                     </a>
-                                                </div>
+                                                </div>';
+                                    endforeach;
+                                } else {
+                                    echo '
+
+                                                <div class="p-car-thumbnails">
+                                                    <a class="car-hover" href="#">
+
+                                                        <img src="admin/production/'.$imagenull['0'].' " alt="JSOFT">
+                                                    </a>
+                                                </div>';
+                                }
+                                    ?>
 
                                                 <div class="p-car-content">
                                                     <h3>
@@ -575,6 +628,9 @@
                                         <?php
                                         endforeach;
                                         ?>
+
+
+<h4><a class='rent-btn' href="our-tours.php">View More Tours</a></h4>
                                     </div>
                                     <!-- PopularCars Tab Content End -->
                                 </div>
@@ -717,7 +773,7 @@
                     <div class="section-title  text-center">
                         <h2>Testimonials</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p></p>
+                        <p>Our happy clients</p>
                     </div>
                 </div>
                 <!-- Section Title End -->
@@ -728,8 +784,9 @@
                     <div class="testimonial-content">
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p></p>
-                            <h3></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
+                                at autem repellat vel magni architecto veritatis sed.</p>
+                            <h3>Vongchong Smith</h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-1.jpg" alt="JSOFT">
                             </div>
@@ -738,8 +795,9 @@
 
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p></p>
-                            <h3></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
+                                at autem repellat vel magni architecto veritatis sed.</p>
+                            <h3>Christine Benson</h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-3.jpg" alt="JSOFT">
                             </div>
@@ -748,8 +806,9 @@
 
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p></p>
-                            <h3></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
+                                at autem repellat vel magni architecto veritatis sed.</p>
+                            <h3>Eliud Mwangi</h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-2.jpg" alt="JSOFT">
                             </div>

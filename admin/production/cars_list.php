@@ -208,8 +208,7 @@ foreach ($result as $row) {
                             </div>
                         </div>
                 </div>
-             </div>
-                          <td>';
+             </div>';
             // echo '<td>' . $imagerow['0'] . '</td>';
         }
     } else {

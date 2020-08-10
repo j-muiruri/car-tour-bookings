@@ -8,7 +8,7 @@
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Cardoor - Car Rental HTML Template</title>
+    <title>JOFRA SAFARIS</title>
 
     <!--=== Bootstrap CSS ===-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -216,6 +216,7 @@ include 'header.php';
     </section>
     <!--== Our Facility Content End ==-->
 
+
     <!--== Partner Area Start ==-->
     <div id="partner-area">
         <div class="container-fluid">
@@ -226,77 +227,76 @@ include 'header.php';
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-1.png" alt="JSOFT">
+                                    <img src="assets/img/partner/lekato-safaris-logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
                         <!-- Single Partner End -->
 
-                        <!-- Single Partner Start -->
-                        <div class="single-partner">
-                            <div class="display-table">
-                                <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-2.png" alt="JSOFT">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Partner End -->
+
 
                         <!-- Single Partner Start -->
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-3.png" alt="JSOFT">
+                                    <img src="assets/img/partner/logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
                         <!-- Single Partner End -->
 
-                        <!-- Single Partner Start -->
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-4.png" alt="JSOFT">
+                                    <img src="assets/img/partner/lekato-safaris-logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
                         <!-- Single Partner End -->
 
-                        <!-- Single Partner Start -->
-                        <div class="single-partner">
-                            <div class="display-table">
-                                <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-5.png" alt="JSOFT">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Partner End -->
+
 
                         <!-- Single Partner Start -->
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-1.png" alt="JSOFT">
+                                    <img src="assets/img/partner/logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
                         <!-- Single Partner End -->
 
-                        <!-- Single Partner Start -->
                         <div class="single-partner">
                             <div class="display-table">
                                 <div class="display-table-cell">
-                                    <img src="assets/img/partner/partner-logo-4.png" alt="JSOFT">
+                                    <img src="assets/img/partner/lekato-safaris-logo.png" alt="JSOFT">
                                 </div>
                             </div>
                         </div>
                         <!-- Single Partner End -->
+
+
+
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="assets/img/partner/logo.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--== Partner Area End ==-->
+
+
 
     <!--== Testimonials Area Start ==-->
     <section id="testimonial-area" style="background-color: #eaeaea;" class="section-padding">
@@ -307,7 +307,7 @@ include 'header.php';
                     <div class="section-title  text-center">
                         <h2>Testimonials</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p></p>
+                        <p>Our happy clients</p>
                     </div>
                 </div>
                 <!-- Section Title End -->
@@ -318,8 +318,9 @@ include 'header.php';
                     <div class="testimonial-content">
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p></p>
-                            <h3></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
+                                at autem repellat vel magni architecto veritatis sed.</p>
+                            <h3>Vongchong Smith</h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-1.jpg" alt="JSOFT">
                             </div>
@@ -328,8 +329,9 @@ include 'header.php';
 
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p>.</p>
-                            <h3></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
+                                at autem repellat vel magni architecto veritatis sed.</p>
+                            <h3>Christine Benson</h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-3.jpg" alt="JSOFT">
                             </div>
@@ -338,8 +340,9 @@ include 'header.php';
 
                         <!--== Single Testimoial Start ==-->
                         <div class="single-testimonial">
-                            <p></p>
-                            <h3></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam obcaecati impedit,
+                                at autem repellat vel magni architecto veritatis sed.</p>
+                            <h3>Eliud Mwangi</h3>
                             <div class="client-logo">
                                 <img src="assets/img/client/client-pic-2.jpg" alt="JSOFT">
                             </div>
@@ -351,6 +354,8 @@ include 'header.php';
         </div>
     </section>
     <!--== Testimonials Area End ==-->
+
+
 
     <!--== Footer Area Start ==-->
  <?php

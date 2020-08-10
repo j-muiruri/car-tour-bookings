@@ -55,7 +55,7 @@ if (isset($_POST['car_add'])) {
             $file_size    = $_FILES['car_rent_image']['size'][$i];
             $file_error   = $_FILES['car_rent_image']['error'][$i];
             $file_type    = $_FILES['car_rent_image']['type'][$i];
-            $file_ext     = explode('.', $file_name);
+            $file_ext     = explode('.', $file_oldName);
             $file_act_ext = strtolower(end($file_ext));
             $jpg          = ['jpg'];
             $png          = ['png'];
@@ -72,9 +72,10 @@ if (isset($_POST['car_add'])) {
             }
 
             // $new_file_name = $name . $file_act_ext;
-            $file_des = $path . '/' . $file_name.$file_act_ext;
-
+            $file_des = $path . '/' . $file_name.'.'.$file_ext['1'];
+            
             $move = move_uploaded_file($file_tmp, $file_des);
+            // print_r($file_ext['1']);
             if (!$move) {
                 $errorImage = "Sorry Failed To Upload Image!";
                 $msg2 = '<div class="alert alert-danger alert-dismissible " role="alert">
@@ -94,8 +95,7 @@ if (isset($_POST['car_add'])) {
                             </button>
                             <strong>'.$errorImage.'</strong>
                         </div>';
-                }
-                else {
+                } else {
                     $errorImage = "Sorry Failed To Upload Image!".$pathAdd['msg'];
                     $msg2 = '<div class="alert alert-danger alert-dismissible " role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span

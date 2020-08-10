@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Jofra Home* 
-* 
+* Jofra Home*
+*
 */
 
  require 'classes/Car_client.php';
@@ -58,7 +58,7 @@
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
-<?php
+    <?php
 include 'header.php';
 ?>
     <!--== Header Area End ==-->
@@ -88,9 +88,10 @@ include 'header.php';
                 <!-- Car List Content Start -->
                 <div class="col-lg-8">
                     <div class="car-list-content">
+                    
                         <!-- Single Car Start -->
                         <?php
-                                        $carsList = getCars();
+                                        $carsList = getPageCars();
                                         // var_dump($carsList);
                                         $id = 1;
                                         // $result = $carsList;
@@ -99,10 +100,38 @@ include 'header.php';
                                         ?>
                         <div class="single-car-wrap">
                             <div class="row">
+                            <div class="col-lg-5">
+
                                 <!-- Single Car Thumbnail -->
-                                <div class="col-lg-5">
-                                    <div class="car-list-thumb car-thumb-1"></div>
+                                <?php
+                                //Display images
+                                $imageList = getImages($row['0']);
+
+                                $images = $imageList;
+                                // $imageNull = [];
+                                $imagenull['0'] = "images/toyota-v8.jpg";
+                                if ($images != "null") {
+                                    foreach ($images as $imagerow) {
+                                        echo '
+                                        <div class="p-car-thumbnails">
+                                        <a class="car-hover" href="#">
+
+                                            <img src="admin/production/'.$imagerow['0'].' " alt="JSOFT">
+                                        </a>
+                                    </div>';
+                                    }
+                                } else {
+                                    echo '
+                                    <div class="p-car-thumbnails">
+                                    <a class="car-hover" href="#">
+
+                                        <img src="admin/production/'.$imagenull['0'].' " alt="JSOFT">
+                                    </a>
                                 </div>
+                                ';
+                                }
+                                    ?>
+                                    </div>
                                 <!-- Single Car Thumbnail -->
 
                                 <!-- Single Car Info -->
@@ -110,7 +139,8 @@ include 'header.php';
                                     <div class="display-table">
                                         <div class="display-table-cell">
                                             <div class="car-list-info">
-                                                <h2><a href="#"><?php echo $row['1'] . " - " . $row['2']; ?></a></h2>
+                                                <h2><a href="#"><?php echo $row['1'] . " - " . $row['2']; ?></a>
+                                                </h2>
                                                 <h5><?php echo $row['6']; ?>/per day</h5>
                                                 <p><?php echo $row['3']; ?></p>
                                                 <ul class="car-info-list">
@@ -125,12 +155,14 @@ include 'header.php';
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star unmark"></i>
                                                 </p>
-                                                <a class='rent-btn' href="car-details.php?id=<?php echo $row['0']; ?>">View this Car</a>
+                                                <a class='rent-btn'
+                                                    href="car-details.php?id=<?php echo $row['0']; ?>">View this
+                                                    Car</a>
                                                 <?php
                                                     $make = $row['1'];
-                                                    $model =  $row['2']; 
+                                                    $model =  $row['2'];
                                                     echo "<a href='book.php?make=$make&model=$model' class='rent-btn'>Book</a>";
-                                                    ?> 
+                                                    ?>
                                             </div>
                                         </div>
                                     </div>
@@ -179,7 +211,7 @@ include 'header.php';
                         <!-- Single Sidebar End -->
 
                         <!-- Single Sidebar Start -->
-                      
+
                         <!-- Single Sidebar End -->
 
                         <!-- Single Sidebar Start -->
@@ -206,7 +238,7 @@ include 'header.php';
     <!--== Car List Area End ==-->
 
     <!--== Footer Area Start ==-->
-<?php
+    <?php
 include 'footer.php';
 ?>
     <!--== Footer Area End ==-->

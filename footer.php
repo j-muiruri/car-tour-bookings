@@ -21,13 +21,13 @@
             <div class="container">
                 <div class="row">
                     <!-- Single Footer Widget Start -->
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="single-footer-widget">
                             <h2>About Us</h2>
                             <div class="widget-body">
                                 <img src="assets/img/logo.png" alt="JSOFT">
-                                <!-- <p>Whether it is corporate car hire, executive car hire, tours and travelm, organised trips, tires repair & tire sell, or 
-                                executive car wash you want, try us - we've got it. We love adventure travel and always have. There’s something about the feeling of packaging a trip and making it successful.</p> -->
+                                <p>Whether it is corporate car hire, executive car hire, tours and travelm, organised trips, tires repair & tire sell, or 
+                                executive car wash you want, try us - we've got it. We love adventure travel and always have. There’s something about the feeling of packaging a trip and making it successful.</p>
 
                                 <div class="newsletter-area">
                                     <form action="index.html">
@@ -42,43 +42,43 @@
                     <!-- Single Footer Widget End -->
 
                     <!-- Single Footer Widget Start -->
-                    <!-- <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="single-footer-widget">
-                            <h2>Recent Posts</h2>
+                            <h2>Important Links</h2>
                             <div class="widget-body">
                                 <ul class="recent-post">
                                     <li>
-                                        <a href="#">
-                                           Top 10 Destinations 
+                                        <a href="our-cars.php">
+                                          Available Cars
                                            <i class="fa fa-long-arrow-right"></i>
                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                          Road Trip To DOS
+                                        <a href="our-tours.php">
+                                           Available Tours 
                                            <i class="fa fa-long-arrow-right"></i>
                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                           TRAVELING POST CORONA 
+                                        <a href="about.php">
+                                           About Us 
                                            <i class="fa fa-long-arrow-right"></i>
                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            Why should we Wait?
+                                        <a href="contact.php">
+                                            Contact Us
                                            <i class="fa fa-long-arrow-right"></i>
                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- Single Footer Widget End -->
 
                     <!-- Single Footer Widget Start -->
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="single-footer-widget">
                             <h2>get touch</h2>
                             <div class="widget-body">
@@ -89,7 +89,7 @@
                                     <li><i class="fa fa-mobile"></i>(+254) 716 628 034 / 722 708 798</li>
                                     <li><i class="fa fa-envelope"></i> info@jofrasafaris.com</li>
                                 </ul>
-                                <a href="https://goo.gl/maps/b5mt45MCaPB2" class="map-show" target="_blank">Show Location</a>
+                                <a href="https://goo.gl/maps/pwNyjnFE5QHAKTsbA" class="map-show" target="_blank">Show Location</a>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="https://windand.co.ke" target="_blank">Windand Developers</a> -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="https://windand.co.ke" target="_blank">Windand Developers</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>

@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Jofra Home* 
-* 
+* Jofra Home*
+*
 */
 
  require 'classes/Car_client.php';
@@ -50,17 +50,17 @@
 <body class="loader-active">
 
     <!--== Preloader Area Start ==-->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="preloader-spinner">
             <div class="loader-content">
                 <img src="assets/img/preloader.gif" alt="JSOFT">
             </div>
         </div>
-    </div>
+    </div> -->
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
-<?php
+    <?php
 include 'header.php';
 ?>
     <!--== Header Area End ==-->
@@ -100,7 +100,8 @@ include 'header.php';
                         <!-- Choose Area Tab content -->
                         <div class="tab-content" id="myTabContent">
                             <!-- Popular Cars Tab Start -->
-                            <div class="tab-pane fade show active" id="popular_cars" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="tab-pane fade show active" id="popular_cars" role="tabpanel"
+                                aria-labelledby="home-tab">
                                 <!-- Popular Cars Content Wrapper Start -->
                                 <div class="popular-cars-wrap">
                                     <!-- Filtering Menu -->
@@ -118,7 +119,7 @@ include 'header.php';
                                     <div class="row popular-car-gird">
                                         <!-- Single Popular Car Start -->
                                         <?php
-                                        $toursList = getTours();
+                                        $toursList = getPageTours();
                                         // var_dump($toursList);
                                         $id = 1;
                                         // $result = $toursList;
@@ -127,16 +128,42 @@ include 'header.php';
                                         ?>
                                         <div class="col-lg-4 col-md-6 loctour inttour exc">
                                             <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="assets/img/tours/tours-and-travel.jpg">
-                                                        <img src="assets/img/tours/tours-and-travel.jpg" alt="JSOFT">
-                                                    </a>
-                                                </div>
 
+                                            <?php
+                                //Display images
+                                $imageList = getTourImages($row['0']);
+
+                                $images = $imageList;
+                                $imageNull = [];
+                                $imagenull['0'] = "images/tours2.jpg";
+                                if ($images != "null") {
+                                    foreach ($images as $imagerow):
+                                        echo '
+
+                                                <div class="p-car-thumbnails">
+                                                    <a class="car-hover" href="#">
+
+                                                        <img src="admin/production/'.$imagerow['0'].' " alt="JSOFT">
+                                                    </a>
+                                                </div>';
+                                    endforeach;
+                                }
+                                else {
+                                    echo '
+
+                                                <div class="p-car-thumbnails">
+                                                    <a class="car-hover" href="#">
+
+                                                        <img src="admin/production/'.$imagenull['0'].' " alt="JSOFT">
+                                                    </a>
+                                                </div>';
+                                }
+                                                ?>
                                                 <div class="p-car-content">
                                                     <h3>
                                                         <a href="#"><?php echo $row['1']; ?></a>
-                                                        <span class="price"><i class="fa fa-tag"></i>KES <?php echo $row['6']."/".$row['5']; ?> days</span>
+                                                        <span class="price"><i class="fa fa-tag"></i>KES
+                                                            <?php echo $row['6']."/".$row['5']; ?> days</span>
                                                     </h3>
 
                                                     <h5>Tour</h5>
@@ -146,11 +173,13 @@ include 'header.php';
                                                         <a href="#"><?php echo $row['4']; ?></a>
                                                         <a href="#">Group size: <?php echo $row['3']; ?></a>
                                                     </div>
-                                                    <a class='rent-btn' href="tour-details.php?id=<?php echo $row['0']; ?>">View this Tour</a>
-<?php
+                                                    <a class='rent-btn'
+                                                        href="tour-details.php?id=<?php echo $row['0']; ?>">View this
+                                                        Tour</a>
+                                                    <?php
     $tour = $row['1'];
     echo "<a href='book.php?tour=$tour' class='rent-btn'>Book Tour</a>";
-?>                                                        
+?>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,7 +196,7 @@ include 'header.php';
                             <!-- Popular Cars Tab End -->
 
 
-                 
+
                         </div>
                         <!-- Choose Area Tab content -->
                     </div>
@@ -177,10 +206,10 @@ include 'header.php';
         </div>
     </section>
     <!--== Tours Area End ==-->
-   
+
 
     <!--== Footer Area Start ==-->
-<?php
+    <?php
 include 'footer.php';
 ?>
     <!--== Footer Area End ==-->

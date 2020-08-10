@@ -12,8 +12,7 @@ if ($tourData['id'] === "null") {
     $resource = "TOUR";
     // Tour not found
     header("Location: 404.php?resource=".$resource);
-}
-else {
+} else {
     $tourDetails = getTour($id);
     $rtitle = "Tour Details";
     $itemName = $tourDetails['name'];
@@ -21,7 +20,7 @@ else {
 
 ?>
     <!--== Preloader and Header Area Start ==-->
-<?php include 'templates/car-details/header.php'; ?>
+    <?php include 'templates/car-details/header.php'; ?>
     <!--== Preloader, Header Area End ==-->
 
     <!--== Page Title Area Start ==-->
@@ -51,17 +50,43 @@ else {
                     <div class="car-details-content">
                         <h2><?php  echo $tourDetails['name'];?><span class="price">Booking Price: 
                         <b>Ksh. <?php  echo $tourDetails['price'].' for '.$tourDetails['days'].' Days';?> </b></span></h2>
-                        <div class="car-preview-crousel">
-                            <div class="single-car-preview">
-                                <img src="assets/img/tours/tours-and-travel.jpg" alt="JSOFT">
-                            </div>
-                            <div class="single-car-preview">
-                                <img src="assets/img/tours/safari-tours.jpg" alt="JSOFT">
-                            </div>
-                            <div class="single-car-preview">
-                                <img src="assets/img/tours/balloon-tours.jpg" alt="JSOFT">
-                            </div>
-                        </div>
+                       
+                        <?php
+                                //Display images
+                                $imageList = getAllTourImages($id);
+
+                                $images = $imageList;
+                                $imagenull['0']  = "assets/img/tours/tours-and-travel.jpg";
+                                if ($images != "null") {
+                                    //Less than 2 images
+                                    if ($_COOKIE['total_images']> 2) {
+                                        // tour images carousel
+                                        foreach ($images as $imagerow) {
+                                            echo '
+                                            <div class="car-preview-crousel">
+                                            <div class="single-car-preview">
+                                            <img src="admin/production/'.$imagerow['0'].' " alt="JSOFT">
+                                        </div>
+                                        </div>';
+                                        }
+                                    } else {
+                                        // single image
+                                        foreach ($images as $imagerow1) {
+                                            echo '
+                                                <div class="single-car-preview">
+                                            <img src="admin/production/'.$imagerow1['0'].' " alt="JSOFT">
+                                        </div>'
+                                        ;
+                                        }
+                                    }
+                                } else {
+                                    //default images
+                                    echo '
+                                        <div class="single-car-preview">
+                                            <img src="'.$imagerow2.' " alt="JSOFT">
+                                        </div>';
+                                }
+                                    ?>
                         <div class="car-details-info">
                             <h4>Additional Info</h4>
                             <p><?php  echo $tourDetails['description'];?></p>

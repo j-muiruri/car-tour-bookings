@@ -5,11 +5,16 @@
                             <h3>For More Informations</h3>
 
                             <div class="sidebar-body">
-                                <p><i class="fa fa-mobile"></i> +8801816 277 243</p>
+                                <p><i class="fa fa-mobile"></i> (+254) 716 628 034</p>
                                 <p><i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00</p>
                             </div>
                         </div>
-                
+                        <!-- Single Sidebar End -->
+
+                        <!-- Single Sidebar Start -->
+
+                        <!-- Single Sidebar End -->
+
                         <!-- Single Sidebar Start -->
                         <div class="single-sidebar">
                             <h3>Connect with Us</h3>
@@ -26,4 +31,4 @@
                         </div>
                         <!-- Single Sidebar End -->
                     </div>
-</div>
+                </div>

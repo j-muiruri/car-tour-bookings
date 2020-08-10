@@ -9,7 +9,10 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     removeCar($id);
-    header("Location: cars_list.php#datatable-responsive");
+    header("Location: cars_list.php");
 }
 
+// $id ="46";
+
+// removeCar($id);
 ?>

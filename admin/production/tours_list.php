@@ -134,7 +134,7 @@ foreach ($result as $row)
     echo '<td>' . substr($row['7'], 0, 50). '</td>';
 
                                                          //Display images
-    $imageList = getImages($row['0']);
+    $imageList = getTourImages($row['0']);
 
     $images         = $imageList;
     $imageNull      = [];
@@ -156,8 +156,7 @@ foreach ($result as $row)
                             </div>
                         </div>
                 </div>
-             </div>
-                          <td>';
+             </div>';
             // echo '<td>' . $imagerow['0'] . '</td>';
 
         }

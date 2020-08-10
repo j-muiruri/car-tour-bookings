@@ -96,6 +96,7 @@ function removeCar($id)
     if ($conn->query($sql) === true) {
         // echo "Record deleted";
         $result['delete'] =  true;
+        removeImage($id);
         return $result;
     } else {
         $result['delete'] =  false;
@@ -134,8 +135,7 @@ function addImage($carId, $pathname)
 function getImages($carId)
 {
     $conn = dbConn();
-    $resourcetype = "car";
-    $sql ="SELECT name FROM car_images WHERE image_id = '$carId'";
+    $sql ="SELECT name FROM car_images WHERE image_id = '$carId' ORDER BY id ASC LIMIT 1";
     $data = $conn->query($sql);
     if ($data->num_rows > 0) {
         // echo "Images Obtained";
@@ -177,7 +177,7 @@ function editImage($id, $image_id, $name)
 function removeImage($id)
 {
     $conn = dbConn();
-    $sql = "DELETE FROM `car_images` WHERE `id` ='$id'";
+    $sql = "DELETE FROM `car_images` WHERE `image_id` ='$id'";
 
     if ($conn->query($sql) === true) {
         // echo "Record deleted";

@@ -95,9 +95,12 @@ function removeTour($id)
 
     if ($conn->query($sql) === true) {
         // echo "Record deleted";
-        return true;
+        $result['delete'] =  true;
+        removeImage($id);
+        return $result;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $result['delete'] =  false;
+        $result['msg'] =  "Error: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
@@ -127,11 +130,11 @@ function addImage($tourId, $pathname)
  * List  Tour Images
  *@return $result
  * */
-function getImages($tourId)
+function getTourImages($tourId)
 {
     $conn = dbConn();
-    $sql  = "SELECT name FROM tour_images WHERE image_id = '$tourId'";
-
+    $sql  = "SELECT name FROM tour_images WHERE image_id = '$tourId' ORDER BY id ASC LIMIT 1";
+    $data = $conn->query($sql);
     if ($data->num_rows > 0) {
         // echo "Images Obtained";
         $result = $data->fetch_all();

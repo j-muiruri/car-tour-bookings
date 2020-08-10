@@ -179,7 +179,7 @@ include 'header.php';
                     </div>
 
                     <!-- Page Pagination Start -->
-                    <div class="page-pagi">
+                    <!-- <div class="page-pagi">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
                                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -191,7 +191,7 @@ include 'header.php';
                                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                     <!-- Page Pagination End -->
                 </div>
                 <!-- Car List Content End -->

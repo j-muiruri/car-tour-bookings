@@ -116,10 +116,12 @@ function addImage($carId, $pathname)
 
 
     if ($conn->query($sql) === true) {
+        
         $result['add_img'] =  true;
         $result['msg'] =  "Image uploaded successfully";
         return $result;
     } else {
+        
         $result['msg'] =   "Error: " . $sql . "<br>" . $conn->error;
         $result['add_img'] =  false;
         return $result;

@@ -86,7 +86,7 @@ if (isset($_POST['tour_add'])) {
                         </div>';
             } else {
                 $pathAdd =addImage($tourDetails['id'], $file_des);
-                if ($pathAdd) {
+                if ($pathAdd['add_img'] === true) {
                     $errorImage = "Image Uploaded!";
                     $msg2 = '<div class="alert center alert-success alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
@@ -96,7 +96,7 @@ if (isset($_POST['tour_add'])) {
                         </div>';
                 }
                 else {
-                    $errorImage = "Sorry Failed To Upload Image!".$pathAdd['msg'];
+                    $errorImage = "Sorry Failed To Store Image Path!".$pathAdd['msg'];
                     $msg2 = '<div class="alert  center alert-danger alert-dismissible " role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">×</span>

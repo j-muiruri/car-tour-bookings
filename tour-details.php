@@ -48,8 +48,9 @@ if ($tourData['id'] === "null") {
                 <!-- Car List Content Start -->
                 <div class="col-lg-8">
                     <div class="car-details-content">
-                        <h2><?php  echo $tourDetails['name'];?><span class="price">Booking Price: 
-                        <b>Ksh. <?php  echo $tourDetails['price'].' for '.$tourDetails['days'].' Days';?> </b></span></h2>
+                        <h2><?php  echo $tourDetails['name'];?></h2>
+                        <span class="price">Booking Price: 
+                        <b>Ksh. <?php  echo $tourDetails['price'].' for '.$tourDetails['days'].' Days';?> </b></span>
                        
                         <?php
                                 //Display images
@@ -60,30 +61,28 @@ if ($tourData['id'] === "null") {
                                 if ($images != "null") {
                                     //Less than 2 images
                                     if ($_COOKIE['total_images']> 2) {
+                                        unset($_COOKIE['total_images']);
+                                        echo '<div class="car-preview-crousel">';
                                         // tour images carousel
                                         foreach ($images as $imagerow) {
-                                            echo '
-                                            <div class="car-preview-crousel">
-                                            <div class="single-car-preview">
-                                            <img src="admin/production/'.$imagerow['0'].' " alt="JSOFT">
-                                        </div>
-                                        </div>';
+                                            echo '<div class="single-car-preview">
+                                                        <img src="admin/production/'.$imagerow['0'].' " alt="JSOFT">
+                                                    </div>';
                                         }
+                                        echo '</div>';
                                     } else {
                                         // single image
                                         foreach ($images as $imagerow1) {
-                                            echo '
-                                                <div class="single-car-preview">
-                                            <img src="admin/production/'.$imagerow1['0'].' " alt="JSOFT">
-                                        </div>'
-                                        ;
+                                            echo '<div class="single-car-preview">
+                                                        <img src="admin/production/'.$imagerow1['0'].' " alt="JSOFT">
+                                                    </div>';
                                         }
                                     }
                                 } else {
                                     //default images
                                     echo '
                                         <div class="single-car-preview">
-                                            <img src="'.$imagerow2.' " alt="JSOFT">
+                                            <img src="'.$imagenull['0'].' " alt="JSOFT">
                                         </div>';
                                 }
                                     ?>

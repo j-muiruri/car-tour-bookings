@@ -494,10 +494,12 @@
                                         endforeach;
                                         ?>
                                         <!-- Single Popular Car End -->
-                                        <h4><a class='rent-btn' href="our-cars.php">View More Cars</a></h4>
+                                        
                                        
                                     </div>
                                     <!-- PopularCars Tab Content End -->
+
+                                    <h4><a class='rent-btn' href="our-cars.php">View More Cars</a></h4>
                                 </div>
                                 <!-- Popular Cars Content Wrapper End -->
                             </div>
@@ -630,9 +632,10 @@
                                         ?>
 
 
-<h4><a class='rent-btn' href="our-tours.php">View More Tours</a></h4>
+
                                     </div>
                                     <!-- PopularCars Tab Content End -->
+                                    <h4><a class='rent-btn' href="our-tours.php">View More Tours</a></h4>
                                 </div>
                                 <!-- Popular Cars Content Wrapper End -->
                             </div>

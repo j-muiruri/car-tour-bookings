@@ -115,10 +115,12 @@ function addImage($tourId, $pathname)
     $sql          = "INSERT INTO `tour_images`(`name`, `image_id`, `type`) VALUES ('$pathname','$tourId', '$resourcetype')";
 
     if ($conn->query($sql) === true) {
+        echo "Image uploaded successfully\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
         $result['add_img'] =  true;
         $result['msg'] =  "Image uploaded successfully";
         return $result;
     } else {
+        echo "opposite of Image uploaded successfully\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
         $result['msg'] =   "Error: " . $sql . "<br>" . $conn->error;
         $result['add_img'] =  false;
         return $result;

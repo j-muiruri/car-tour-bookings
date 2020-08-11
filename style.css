@@ -94,7 +94,7 @@
 }
 
 .section-padding {
-	padding: 100px 0;
+	padding: 50px 0;
 }
 
 .section-title {
@@ -723,7 +723,7 @@ a.slicknav_btn {
 /*== Choose Car Area CSS Start ==*/
 
 #choose-car.section-padding {
-	padding-bottom: 70px;
+	padding-bottom: 10px;
 }
 
 .choose-content-wrap .nav-tabs {

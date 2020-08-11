@@ -129,7 +129,7 @@ include 'header.php';
                                         <div class="col-lg-4 col-md-6 loctour inttour exc">
                                             <div class="single-popular-car">
 
-                                            <?php
+                                                <?php
                                 //Display images
                                 $imageList = getTourImages($row['0']);
 
@@ -174,7 +174,7 @@ include 'header.php';
                                                         <a href="#">Group size: <?php echo $row['3']; ?></a>
                                                     </div>
                                                     <a class='rent-btn'
-                                                        href="tour-details.php?id=<?php echo $row['0']; ?>">View this
+                                                        href="tour-details.php?id=<?php echo $row['0']; ?>">View
                                                         Tour</a>
                                                     <?php
     $tour = $row['1'];

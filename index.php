@@ -499,7 +499,7 @@
                                     </div>
                                     <!-- PopularCars Tab Content End -->
 
-                                    <h4><a class='rent-btn' href="our-cars.php">View More Cars</a></h4>
+                                    <h6 class= "text-center"><a class='rent-btn' href="our-cars.php">View More Cars</a></h6>
                                 </div>
                                 <!-- Popular Cars Content Wrapper End -->
                             </div>
@@ -635,7 +635,7 @@
 
                                     </div>
                                     <!-- PopularCars Tab Content End -->
-                                    <h4><a class='rent-btn' href="our-tours.php">View More Tours</a></h4>
+                                    <h6 class= "text-center"><a class='rent-btn' href="our-tours.php">View More Tours</a></h6>
                                 </div>
                                 <!-- Popular Cars Content Wrapper End -->
                             </div>
